@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: Leafcloud Tutorials
+nav:
+    - Home: index.md
+    - Setup secure instance access: 1-3-Set-up-secure-instance-access.md
+    - Launching an instance: 1-3-Set-up-secure-instance-access.md
+    - Cennecting to your instance: 1-3-Set-up-secure-instance-access.md
+theme: readthedocs

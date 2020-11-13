@@ -6,7 +6,7 @@ This tutorial explains how work on a project using the Openstack CLI tools
 
 To get started, install the Openstack CLI by entering the following command:
 
-```shell script
+``` shell
  sudo apt update
  sudo apt install -y python3-pip python3-dev
  sudo pip3 install --upgrade pip
@@ -21,13 +21,13 @@ Log in to your Leafcloud account, click on your user name and download the *Open
 
 Copy, then paste the contents of the file into a new text document i.e.
 
-```shell script
+``` shell
  ~/.leafcloudopenrc.sh
 ```
 
 Now, run the following to use the configuration file:
 
-```shellscript
+``` shell
 source ~/.[File name].sh
 ```
 
@@ -37,36 +37,36 @@ Enter your password, you have now gained access to the Openstack CLI
 
 To create a server using the Openstack CLI, start by creating a new key pair
 
-```shell script
+``` shell
 keypair create [keyname]
 ```
 For example:
 
-```shell script
+``` shell
 keypair create clitest_key
 ```
 
 To make sure the key has been created successfully, look it up in the key pair list like this:
 
-```shell script
+``` shell
 keypair list
 ```
 
 Next, list the possible images and flavors by entering the following:
 
-```shell script
+``` shell
 image list
 flavor list
 ```
 
 To create your new server now use:
 
-```shell script
+``` shell
 server create clitest --image [image name] --flavor [instance type] --key-name [keyname] --network public
 ```
 For our test server that looks like this:
 
-```shell script
+``` shell
 server create clitest --image cirros 0.5.1 --flavor ec1.small --keyname clitest_key --network public
 ```
 

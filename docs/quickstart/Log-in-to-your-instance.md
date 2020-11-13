@@ -4,7 +4,7 @@ This tutorial will show you how to log in to your instance
 
 Open your terminal and enter the following:
 
-```shell script
+``` shell
 ls /
 ssh [OS_name]@[Instance Public IP Address]
 ```
@@ -13,7 +13,7 @@ Note: the name of the OS should be entered in lowercase
 
 In the case of our example instance this would be
 
-```shellscript
+``` shell
 ls /
 ssh cirros@[Public IP]
 ```
@@ -28,7 +28,7 @@ You have now logged in to your instance
 
 To log into your instance using a specific SSH key, type the following in your terminal:
 
-```shell script
+``` shell
 ssh -i .ssh/id_rsa [OS_name]@[Public IP]
 ```
 
@@ -40,13 +40,13 @@ Navigate to the downloaded .pem file using your terminal
 
 First secure your key file by entering:
 
-```shellscript
+``` shell
 chmod 400 [name of your key pair].pem
 ```
 
 Now log in using the following command: 
 
-```shell script
+``` shell
 ssh -1 [key pair name].pem [OS_name]@[Public IP]
 ```
 

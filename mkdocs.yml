@@ -5,14 +5,14 @@ nav:
           - Changing your Password: quickstart/Changing-your-password.md
           - Launching an Instance: quickstart/Launching-an-instance.md
           - Connecting to your instance: quickstart/Log-in-to-your-instance.md
-          - Key Pairs: quickstart/Configuring-security-groups.md
+          - Configuring Security groups: quickstart/Configuring-security-groups.md
           - Key Pairs: quickstart/Key-pairs.md
           - Using the Openstack CLI: quickstart/Using-Openstack-CLI.md
     - Volumes:
           - Creating a Volume: volumes/Creating-a-new-volume.md
           - Attaching a Volumne: volumes/Attaching-a-volume-to-your-instance.md
           - Extending a Volume: volumes/Extending-a-bootable-volume.md
-          - Making Volume Snapshot: volumes/Make-a-volume-snapshot.md
+          - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
           - Migrating a Volume: volumes/Migrating-a-volume.md
 
 theme: readthedocs

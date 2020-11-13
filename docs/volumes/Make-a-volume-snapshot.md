@@ -6,7 +6,7 @@ Navigate to *Project > Volumes*
 
 Select the volume you want to make a snapshot of and click on *Create Snapshot* in the *Actions* dropdown menu
 
-![volumes-4](images/volumes-4.png)
+![volumes-4](../images/volumes-4.png)
 
 Give your snapshot a name and add a description
 
@@ -22,7 +22,7 @@ Navigate to *Volumes > Snapshots*
 
 Select the snapshot you want to restore and click *Create Volume on the right
 
-![volumes-5](images/volumes-5.png)
+![volumes-5](../images/volumes-5.png)
 
 Give your new volume a name and adjust the size as group as required
 

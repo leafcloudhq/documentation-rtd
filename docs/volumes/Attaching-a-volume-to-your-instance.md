@@ -10,7 +10,7 @@ Click on the *Actions* dropdown menu on the right
 
 Select *Attach Volume*
 
-![volumes-3](images/volumes-3.png)
+![volumes-3](../images/volumes-3.png)
 
 Select the volume you want to attach from the *Volume ID* dropdown menu, then click *Attach Volume*
 

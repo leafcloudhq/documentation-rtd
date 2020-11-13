@@ -6,7 +6,7 @@ Navigate to *Project > Volumes*
 
 Click *Create Volume* on the right
 
-![volumes-1](images/volumes-1.png)
+![volumes-1](../images/volumes-1.png)
 
 Give your new volume a name (i.e. volumetest1) and add a description
 
@@ -18,7 +18,7 @@ Select the size of the volume, for our bootable volume example, set *Size (GiB) 
 
 Set the *Availability Zone* and *Group* that the volume belongs to (in the case of our example, make sure *Group* is set to *No group*)
 
-![volumes-2](images/volumes-2.png)
+![volumes-2](../images/volumes-2.png)
 
 Click Create Volume
 

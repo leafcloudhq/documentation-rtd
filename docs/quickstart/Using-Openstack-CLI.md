@@ -1,8 +1,8 @@
-# How to use Openstack CLI
+# How to use the Openstack CLI
 
 This tutorial explains how work on a project using the Openstack CLI tools 
 
-### Installing Openstack CLI
+### Installing the Openstack CLI
 
 To get started, install the Openstack CLI by entering the following command:
 
@@ -17,7 +17,7 @@ To get started, install the Openstack CLI by entering the following command:
 
 Log in to your Leafcloud account, click on your user name and download the *OpenStack RC File*
 
-![openstack-cli-1](images/openstack-cli-1.png)
+![openstack-cli-1](../images/openstack-cli-1.png)
 
 Copy, then paste the contents of the file into a new text document i.e.
 

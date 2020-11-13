@@ -6,11 +6,11 @@ Click on your user name, you can find this at the top righthand corner of the ho
 
 In the dropdown menu, select *Settings*. 
 
-![how-to-change-your-password-1](images/how-to-change-your-password-1.png)
+![how-to-change-your-password-1](../images/how-to-change-your-password-1.png)
 
 Select *Change Password*, in the menu on the left.
 
-![how-to-change-your-password-2](images/how-to-change-your-password-2.png)
+![how-to-change-your-password-2](../images/how-to-change-your-password-2.png)
 
 Enter your old password, then select a new password and hit *confirm*.
 

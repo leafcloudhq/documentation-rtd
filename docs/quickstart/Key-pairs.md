@@ -1,6 +1,7 @@
-## Key Pairs
+# Key Pairs
 
-Key pairs consist of two keys: a 'public' and a 'private' key, these ensure that traffic to and from your instance is encrypted through SSH. You can use a single key pair for multiple instances concurrently
+Key pairs consist of two keys: a 'public' and a 'private' key, these ensure that traffic to and from your instance is encrypted through SSH. 
+You can use a single key pair for multiple instances concurrently.
 
 ### Making a new key pair
 

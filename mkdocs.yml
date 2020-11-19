@@ -18,6 +18,5 @@ nav:
         - Creating a Network: network/Creating-a-new-network.md
         - Creating a Router: network/Creating-a-new-router.md
         - Floating IP: network/Floating-IP.md
-        - Configuring Security groups: quickstart/Configuring-security-groups.md
 
 theme: readthedocs

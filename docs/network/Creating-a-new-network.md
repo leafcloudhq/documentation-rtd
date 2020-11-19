@@ -4,17 +4,17 @@ Navigate to *Network > Networks*
 
 Click on *Create Network*
 
-![network1](/home/guy/git-repositories/leafcloud-tutorials/docs/images/networks-1.png)
+![network1](../images/networks-1.png)
 
 ### Network
 
 Give your new network a name and if necessary, tick the *Create Subnet* box
 
-![network2](/home/guy/git-repositories/leafcloud-tutorials/docs/images/networks-2.png)
+![network2](../images/networks-2.png)
 
 In this tutorial we will also create a subnet, if you do not need a subnet, deselect the *Create Subnet* box and click *Create*. Otherwise, click *Next*  
 
-![network3](/home/guy/git-repositories/leafcloud-tutorials/docs/images/networks-3.png)
+![network3](../images/networks-3.png)
 
 ### Subnet
 

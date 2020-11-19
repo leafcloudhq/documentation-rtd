@@ -14,5 +14,10 @@ nav:
           - Extending a Volume: volumes/Extending-a-bootable-volume.md
           - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
           - Migrating a Volume: volumes/Migrating-a-volume.md
+    - Network:
+        - Creating a Network: network/Creating-a-new-network.md
+        - Creating a Router: network/Creating-a-new-router.md
+        - Floating IP: network/Floating-IP.md
+        - Configuring Security groups: quickstart/Configuring-security-groups.md
 
 theme: readthedocs

@@ -1,6 +1,6 @@
 site_name: Leafcloud Tutorials
 nav:
-    - Home: Welcome-to-Leafcloud.md
+    - Home: index.md
     - Quickstart:
           - Changing your Password: quickstart/Changing-your-password.md
           - Launching an Instance: quickstart/Launching-an-instance.md

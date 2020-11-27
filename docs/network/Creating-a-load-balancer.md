@@ -1,14 +1,14 @@
 # Load Balancing
 
-This tutorial will walk you through setting up a basic load balancer between two *Http* instances.
+This tutorial will walk you through setting up a basic load balancer between two *http* instances.
 
-For examples on deploying various types of load balancers using the OpenStack CLI, check out the [*Basic Load Balancing Cookbook*](https://docs.openstack.org/octavia/pike/user/guides/basic-cookbook.html)
+For examples on deploying various types of load balancers using the OpenStack CLI, check out the OpenStack [*Basic Load Balancing Cookbook*](https://docs.openstack.org/octavia/pike/user/guides/basic-cookbook.html)
 
 ## Create a load balancer
 
 Navigate to *Network > Load Balancers* and click on *Create Load Balancer*
 
-![loadbalancer1](../images/loadbalancer1.png)
+![loadbalancer1](/loadbalancer1.png)
 
 ### Load Balancer Details
 

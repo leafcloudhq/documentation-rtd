@@ -6,12 +6,13 @@ This tutorial explains how work on a project using the Openstack CLI tools
 
 To get started, install the Openstack CLI by entering the following command:
 
-``` shell
+```
  sudo apt update
  sudo apt install -y python3-pip python3-dev
  sudo pip3 install --upgrade pip
  sudo pip3 install python-openstackclient
  ```
+
 
 ### Install the configuration file
 

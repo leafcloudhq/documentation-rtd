@@ -22,7 +22,7 @@ Log in to your Leafcloud account, click on your user name and download the *Open
 
 Copy, then paste the contents of the file into a new text document i.e.
 
-``` shell
+```shell
  ~/.leafcloudopenrc.sh
 ```
 

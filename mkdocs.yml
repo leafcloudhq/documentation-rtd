@@ -13,10 +13,10 @@ nav:
           - Attaching a Volumne: volumes/Attaching-a-volume-to-your-instance.md
           - Extending a Volume: volumes/Extending-a-bootable-volume.md
           - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
-          - Migrating a Volume: volumes/Migrating-a-volume.md
     - Network:
         - Creating a Network: network/Creating-a-new-network.md
         - Creating a Router: network/Creating-a-new-router.md
         - Floating IP: network/Floating-IP.md
+        - Creating a Load Balancer: network/Creating-a-load-balancer.md
 
 theme: readthedocs

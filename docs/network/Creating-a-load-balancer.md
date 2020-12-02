@@ -8,7 +8,7 @@ For examples on deploying various types of load balancers using the OpenStack CL
 
 Navigate to *Network > Load Balancers* and click on *Create Load Balancer*
 
-![loadbalancer1](/loadbalancer1.png)
+![loadbalancer1](../images/loadbalancer1.png)
 
 ### Load Balancer Details
 

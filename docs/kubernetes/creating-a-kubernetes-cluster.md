@@ -2,11 +2,11 @@
 
 This tutorial will guide you through the process of creating a new Kubernetes cluster, using the OpenStack CLI. Container clusters are deployed and managed by the OpenStack Magnum project. You can use these clusters to deploy reproducible high-availability services and infrastructures 
 
-To get started, you need to have a few things prepared: 
+To get started, you'll need to have a few things prepared: 
 
 The OpenStack CLI: You can find a tutorial on how to set up the OpenStack CLI in the *Quick Start* section
 
-Kubectl: This allows you to deploy your applications as a cluster. make sure it's the same as used in the cluster you are deploying You can download the kubectl here: 
+Kubectl: This allows you to deploy your applications as a cluster. make sure it's the same version as used in the cluster you are deploying. You can download the kubectl here: 
 
 `` 
 https://v1-19.docs.kubernetes.io/docs/tasks/tools/install-kubectl/ 
@@ -29,6 +29,9 @@ Check if you can reach the server list using OpenStack:
 `` 
 openstack server list 
 `` 
+## Choose a template
+
+ You can find a list of the various templates at ... Choose the one that best meets your needs.
 
 ## Create a Cluster 
 

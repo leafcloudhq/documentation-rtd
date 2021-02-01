@@ -9,18 +9,12 @@ ls /
 ssh [OS_name]@[Instance Public IP Address]
 ```
 
-Note: the name of the OS should be entered in lowercase
-
-In the case of our example instance this would be
-
 ``` shell
 ls /
-ssh cirros@[Public IP]
+ssh CentOS-8@[Public IP]
 ```
 
 Enter your username and password
-
-When the "are you sure you want to continue" warning pops up, type *yes*
 
 You have now logged in to your instance
 

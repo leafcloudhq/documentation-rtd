@@ -26,9 +26,9 @@ Make sure your settings are as follows:
 
 Boot Source: Image, check to make sure that *Create New Volume* is selected
 
-Volume Size: 1GiB, check if *Delete Volume on Instance Delete* is **not** selected
+Volume Size: 10GiB, check if *Delete Volume on Instance Delete* is **not** selected
 
-Select *Cirros 0.5.1* by clicking the up arrow on the right (this image does not need a key pair)
+Select *CentOS-8* by clicking the up arrow on the right 
 
 ![how-to-start-an-instance-3](../images/how-to-start-an-instance-3.png)
 

@@ -11,7 +11,7 @@ ssh [OS_name]@[Instance Public IP Address]
 
 ``` shell
 ls /
-ssh CentOS-8@[Public IP]
+ssh CentOS@[Public IP]
 ```
 
 Enter your username and password

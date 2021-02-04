@@ -2,12 +2,12 @@ site_name: Leafcloud Tutorials
 nav:
     - Home: index.md
     - Quickstart:
-          - Changing your Password: quickstart/Changing-your-password.md
-          - Launching an Instance: quickstart/Launching-an-instance.md
-          - Connecting to your instance: quickstart/Log-in-to-your-instance.md
-          - Configuring Security groups: quickstart/Configuring-security-groups.md
-          - Key Pairs: quickstart/Key-pairs.md
-          - Using the Openstack CLI: quickstart/Using-Openstack-CLI.md
+          - Changing your Password: Getting-Started/Changing-your-password.md
+          - Launching an Instance: Getting-Started/Launching-an-instance.md
+          - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
+          - Configuring Security groups: Getting-Started/Configuring-security-groups.md
+          - Key Pairs: Getting-Started/Key-pairs.md
+          - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
     - Volumes:
           - Creating a Volume: volumes/Creating-a-new-volume.md
           - Attaching a Volumne: volumes/Attaching-a-volume-to-your-instance.md

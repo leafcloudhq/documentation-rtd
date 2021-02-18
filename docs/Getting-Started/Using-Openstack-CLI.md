@@ -7,12 +7,14 @@ This tutorial explains how work on a project using the Openstack CLI tools
 To get started, install the Openstack CLI by entering the following command:
 
 ```shell
- sudo apt update
- sudo apt install -y python3-pip python3-dev
- sudo pip3 install --upgrade pip
- sudo pip3 install python-openstackclient
+sudo apt update -y
+sudo apt install -y python3-pip python3-dev -y
+sudo apt install virtualenv -y
+virtualenv -p python3 openstack_venv
+source openstack_venv/bin/activate
+pip install --upgrade pip
+pip install python-openstackclient
 ```
-
 
 ### Install the configuration file
 
@@ -20,16 +22,12 @@ Log in to your Leafcloud account, click on your user name and download the *Open
 
 ![openstack-cli-1](../images/openstack-cli-1.png)
 
-Copy, then paste the contents of the file into a new text document i.e.
-
-```shell
- ~/.leafcloudopenrc.sh
-```
+Copy, then paste the contents of the file into a new text document i.e. `~/leafcloudopenrc.sh`
 
 Now, run the following to use the configuration file:
 
 ``` shell
-source ~/.[File name].sh
+source ~/leafcloudopenrc.sh
 ```
 
 Enter your password, you have now gained access to the Openstack CLI 
@@ -68,7 +66,7 @@ server create clitest --image [image name] --flavor [instance type] --key-name [
 For our test server that looks like this:
 
 ``` shell
-server create clitest --image cirros 0.5.1 --flavor ec1.small --keyname clitest_key --network public
+server create clitest --image CentOS-8 --flavor ec1.small --keyname clitest_key --network public
 ```
 
-You have now created a server using Openstack CLI
+You have now created a server using the Openstack CLI

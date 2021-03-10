@@ -1,7 +1,7 @@
 site_name: Leafcloud Tutorials
 nav:
     - Home: index.md
-    - Quickstart:
+    - Getting-Started:
           - Changing your Password: Getting-Started/Changing-your-password.md
           - Launching an Instance: Getting-Started/Launching-an-instance.md
           - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
@@ -18,5 +18,8 @@ nav:
         - Creating a Router: network/Creating-a-new-router.md
         - Floating IP: network/Floating-IP.md
         - Creating a Load Balancer: network/Creating-a-load-balancer.md
+    - Kubernetes:
+        - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
+        - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
 
 theme: readthedocs

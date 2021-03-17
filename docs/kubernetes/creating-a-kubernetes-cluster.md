@@ -68,10 +68,10 @@ When the status changes from CREATE_IN_PROGRESS to CREATE_COMPLETE the installat
 openstack coe cluster config my-k8s-cluster
 ``` 
 
-This will download a file called 'config' to the working directory. 
+This will download a file called 'config' to your home directory. 
 
 ``` 
-export KUBECONFIG=/home/user/dir/config 
+export KUBECONFIG=/home/<username>/config 
 ```
 
 The config is now usable by kubectl and you should be able to reach your cluster by entering: 
@@ -80,7 +80,7 @@ The config is now usable by kubectl and you should be able to reach your cluster
 kubectl get nodes -o wide 
 ```
 
-Finally, we can confige the storage class to enable usage of persistant volume claims. First, create the storageclass.yaml file:
+Finally, we can configure the storage class to enable usage of persistent volume claims. First, create the storageclass.yaml file:
 
 ```
 kind: StorageClass

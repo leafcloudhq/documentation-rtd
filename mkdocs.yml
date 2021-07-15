@@ -10,7 +10,7 @@ nav:
           - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
     - Volumes:
           - Creating a Volume: volumes/Creating-a-new-volume.md
-          - Attaching a Volumne: volumes/Attaching-a-volume-to-your-instance.md
+          - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
           - Extending a Volume: volumes/Extending-a-bootable-volume.md
           - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
     - Network:

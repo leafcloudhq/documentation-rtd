@@ -15,7 +15,7 @@ sudo snap install kubectl --channel=1.18/stable --classic
 Inside your virtual enviroment install the magnum client:
 
 ```
-pip install python-magnumclient 
+pip install python-openstackclient python-magnumclient 
 ```
 
 Then check if you are able to reach the server list using OpenStack CLI: 
@@ -49,10 +49,10 @@ We support our pre-configured templates, if you want to use custom templates or 
 
 ## Create a Cluster 
 
-Now that we have chosen a template we can create a new cluster
+Now that we have chosen a template we can create a new cluster, with --keypair we select the keypair that will be added to the hosts, so you can access the hosts root over SSH. (default user is 'core')
 
 ```
-openstack coe cluster create my-k8s-cluster --cluster-template k8s-fedora-coreos-32-ha-octavia-ingress
+openstack coe cluster create my-k8s-cluster --cluster-template k8s-fedora-coreos-32-ha-octavia-ingress --keypair <keypair>  
 ```
 
 This process may take a few minutes. To check up on the installation enter the following: 
@@ -68,10 +68,10 @@ When the status changes from CREATE_IN_PROGRESS to CREATE_COMPLETE the installat
 openstack coe cluster config my-k8s-cluster
 ``` 
 
-This will download a file called 'config' to the working directory. 
+This will download a file called 'config' to your home directory. 
 
 ``` 
-export KUBECONFIG=/home/user/dir/config 
+export KUBECONFIG=/home/<username>/config 
 ```
 
 The config is now usable by kubectl and you should be able to reach your cluster by entering: 
@@ -80,7 +80,7 @@ The config is now usable by kubectl and you should be able to reach your cluster
 kubectl get nodes -o wide 
 ```
 
-Finally, we can confige the storage class to enable usage of persistant volume claims. First, create the storageclass.yaml file:
+Finally, we can configure the storage class to enable usage of persistent volume claims. First, create the storageclass.yaml file:
 
 ```
 kind: StorageClass

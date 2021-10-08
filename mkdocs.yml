@@ -1,7 +1,7 @@
 site_name: Leafcloud Tutorials
 nav:
     - Home: index.md
-    - Quickstart:
+    - Getting-Started:
           - Changing your Password: Getting-Started/Changing-your-password.md
           - Launching an Instance: Getting-Started/Launching-an-instance.md
           - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
@@ -10,7 +10,7 @@ nav:
           - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
     - Volumes:
           - Creating a Volume: volumes/Creating-a-new-volume.md
-          - Attaching a Volumne: volumes/Attaching-a-volume-to-your-instance.md
+          - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
           - Extending a Volume: volumes/Extending-a-bootable-volume.md
           - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
     - Network:
@@ -18,5 +18,8 @@ nav:
         - Creating a Router: network/Creating-a-new-router.md
         - Floating IP: network/Floating-IP.md
         - Creating a Load Balancer: network/Creating-a-load-balancer.md
+    - Kubernetes:
+        - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
+        - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
 
 theme: readthedocs

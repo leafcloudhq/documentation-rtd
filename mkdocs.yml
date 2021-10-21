@@ -13,6 +13,8 @@ nav:
           - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
           - Extending a Volume: volumes/Extending-a-bootable-volume.md
           - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
+    - Object Storage:
+        - Using Object Storage (S3): object-storage/using-object-storage.md
     - Network:
         - Creating a Network: network/Creating-a-new-network.md
         - Creating a Router: network/Creating-a-new-router.md
@@ -21,5 +23,4 @@ nav:
     - Kubernetes:
         - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
         - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
-
 theme: readthedocs

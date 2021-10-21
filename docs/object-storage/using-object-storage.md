@@ -1,11 +1,11 @@
 # Using Leafcloud Object Storage
-Leafcloud Object storage is a flexible service meant for storing 'objects' such as files (images, documents, binaries), logs and many other types of objects. As Leafcloud is a managed server you don't have to worry about maintaining servers in order to benefit from this scalable service.
+Leafcloud Object storage is a flexible service meant for storing 'objects' such as files (images, documents, binaries), logs and many other types of objects. As Leafcloud is a managed service you don't have to worry about maintaining servers in order to benefit from this scalable service.
 
 Object storage has a concept of containers (also called 'buckets'), these define a group of objects. A container can be set to private (the default) and public. 
 
-When a container is set to public, the contents of the container can be accesses on the publicly available web address. The address is built up like https://leafcloud.store/ + <container_name\>/ + <path\>/filename.ext. For example, this cat picture: [https://leafcloud.store/test/cat-picture.jpg](https://leafcloud.store/test/cat-picture.jpg)
+When a container is set to public, the contents of the container can be accessed on a publicly available web address. The address is built up like [https://leafcloud.store/<container_name\>/<path\>/<filename\>](https://leafcloud.store/container_name/path/filename.ext). For example, this cat picture: [https://leafcloud.store/test/cat-picture.jpg](https://leafcloud.store/test/cat-picture.jpg)
 
-There is no limit to how much you can store in a container, and you pay only for space that you use. See our [pricing](https://www.leaf.cloud/pricing).
+There is no limit to how much you can store in a container, and you pay only for the space that you use. See our [pricing](https://www.leaf.cloud/pricing).
 
 ## Access Object Storage from the dashboard.
 Navigate to *Object Store > Containers*. From here you can create and browse containers and change the public/private setting.

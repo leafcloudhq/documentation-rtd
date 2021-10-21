@@ -46,7 +46,7 @@ Here, you can specify any path you like, or omit the path to put the object in t
 ### Creating S3 compatible credentials
 As an alternative to the OpenStack native container interface you can also use the de-facto industry standard "Amazon S3 interface". Out of convenience almost all cloud providers support this XML interface.
 
-To use the S3-compatible interface you will need to make and EC2 credential These credentials have access to your project and the storage containers within.
+To use the S3-compatible interface you will need to make an EC2 credential. These credentials have access to your project and the storage containers within.
 
 ```sh
 openstack ec2 credentials create

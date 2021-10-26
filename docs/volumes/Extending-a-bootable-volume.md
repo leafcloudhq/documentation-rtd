@@ -1,4 +1,83 @@
-# Extending a bootable volume
+# Resizing (extending) a volume
+
+Sometimes you find yourself in the situation that the disk you provisioned for your server is not large enough. It can then be really useful to resize the volume. 
+
+This works best if your server runs a compatible filesystem and OS. We do not support Windows at this time.
+
+
+There are generally situations: 
+1. The volume is a secondary attached volume on your instance.
+2. The volume you want to resize is the root-disk of an instance
+
+
+## If the volume is a secondary attached volume
+
+In this case you can unmount and detach the volume before resizing. The following steps will describe the process.
+
+1. Unmount the volume
+   Login to the server and find which disk is the one in question `df -h`. It will probably be called something like /dev/vdb
+   ```sh
+   unmount /dev/<drive>
+   ```
+
+2. Identify which is the correct volume to detach.
+   Now using the command line on your local machine you can find the details
+   
+   ```sh
+   openstack server show <server_id>
+   ```
+   Look for the section that says: Volumes attached
+
+   And check that this is the correct volume 
+   ```sh
+   openstack volume show <volume_id>
+   ```
+
+3. Detach the volume
+   Now you can detach the volume
+
+   ```sh
+   openstack server remove volume <server> <volume>
+   ```
+
+4. Resize the volume
+   Now you can specify the new size:
+
+   ```sh
+   openstack volume set --size <new_size> <volume>
+   ```
+
+5. Re-attach te volume
+   ```sh
+   openstack server add volume <server> <volume>
+   ```
+
+6. Resize the volume from within the server
+   Now you should be able to see the disk again from the shell in your server.
+   ```sh
+   lsblk
+   ```
+   Depending on the filesystem you have used the command will be different. For ext3, the command is: 
+   
+   ```sh
+   # not specifying any parameters typically will grow to the maximum size.
+   resize2fs /dev/<disk>
+   ```
+
+7. Re-mount the disk on a location of your choice
+   As a last step you need to re-mount you disk
+   ```
+   # if it was attached before (your drive was still configured in /etc/fstab):
+   mount --all
+
+   # otherwise mount it to a new location (this will not persist across reboots)
+   mount /dev/<disk_number> /mnt/<disk_number>
+   ```
+
+You have now successfully expanded a volume.
+
+
+## If the volume is your bootdisk
 
 Open your terminal and enter the following to look up the volume ID 
 

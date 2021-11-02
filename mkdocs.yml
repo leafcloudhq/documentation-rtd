@@ -1,26 +1,27 @@
 site_name: Leafcloud Tutorials
 nav:
-    - Home: index.md
-    - Getting-Started:
-          - Changing your Password: Getting-Started/Changing-your-password.md
-          - Launching an Instance: Getting-Started/Launching-an-instance.md
-          - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
-          - Configuring Security groups: Getting-Started/Configuring-security-groups.md
-          - Key Pairs: Getting-Started/Key-pairs.md
-          - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
-    - Volumes:
-          - Creating a Volume: volumes/Creating-a-new-volume.md
-          - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
-          - Extending a Volume: volumes/Extending-a-bootable-volume.md
-          - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
-    - Object Storage:
-        - Using Object Storage (S3): object-storage/using-object-storage.md
-    - Network:
-        - Creating a Network: network/Creating-a-new-network.md
-        - Creating a Router: network/Creating-a-new-router.md
-        - Floating IP: network/Floating-IP.md
-        - Creating a Load Balancer: network/Creating-a-load-balancer.md
-    - Kubernetes:
-        - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
-        - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
+  - Home: index.md
+  - Getting-Started:
+      - Changing your Password: Getting-Started/Changing-your-password.md
+      - Launching an Instance: Getting-Started/Launching-an-instance.md
+      - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
+      - Configuring Security groups: Getting-Started/Configuring-security-groups.md
+      - Key Pairs: Getting-Started/Key-pairs.md
+      - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
+  - Volumes:
+      - Creating a Volume: volumes/Creating-a-new-volume.md
+      - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
+      - Extending a Volume: volumes/Extending-a-bootable-volume.md
+      - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
+  - Object Storage:
+      - Using Object Storage (S3): object-storage/using-object-storage.md
+  - Network:
+      - Creating a Network: network/Creating-a-new-network.md
+      - Creating a Router: network/Creating-a-new-router.md
+      - Floating IP: network/Floating-IP.md
+      - Creating a Load Balancer: network/Creating-a-load-balancer.md
+      - Creating a site to site VPN: network/Creating-site-to-site-vpn.md
+  - Kubernetes:
+      - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
+      - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
 theme: readthedocs

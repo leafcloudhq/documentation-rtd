@@ -16,6 +16,7 @@ In this case you can unmount and detach the volume before resizing. The followin
 
 1. Unmount the volume
     Login to the server and find which disk is the one in question `df -h`. It will probably be called something like /dev/vdb
+    
     ```sh
     unmount /dev/<drive>
     ```
@@ -23,7 +24,8 @@ In this case you can unmount and detach the volume before resizing. The followin
 2. Identify which is the correct volume to detach.
     Now using the command line on your local machine you can find the details
 
-    ```
+    
+    ```shell 
     openstack server show <server_id>
     ```
 

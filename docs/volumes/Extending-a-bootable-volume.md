@@ -17,14 +17,14 @@ In this case you can unmount and detach the volume before resizing. The followin
 1. Unmount the volume
     Login to the server and find which disk is the one in question `df -h`. It will probably be called something like /dev/vdb
     
-    ```shell
+    ```
     unmount /dev/<drive>
     ```
 
 2. Identify which is the correct volume to detach.
     Now using the command line on your local machine you can find the details
 
-    ```shell 
+    ``` 
     openstack server show <server_id>
     ```
 
@@ -36,26 +36,26 @@ In this case you can unmount and detach the volume before resizing. The followin
     openstack volume show <volume_id>
     ```
 
-1. Detach the volume
+3. Detach the volume
     Now you can detach the volume
 
     ```sh
     openstack server remove volume <server> <volume>
     ```
 
-2. Resize the volume
+4. Resize the volume
     Now you can specify the new size:
 
     ```sh
     openstack volume set --size <new_size> <volume>
     ```
 
-3. Re-attach te volume
+5. Re-attach te volume
     ```sh
     openstack server add volume <server> <volume>
     ```
 
-4. Resize the volume from within the server
+6. Resize the volume from within the server
     Now you should be able to see the disk again from the shell in your server.
     ```sh
     lsblk
@@ -67,7 +67,7 @@ In this case you can unmount and detach the volume before resizing. The followin
     resize2fs /dev/<disk>
     ```
 
-5. Re-mount the disk on a location of your choice
+7. Re-mount the disk on a location of your choice
     As a last step you need to re-mount you disk
     ```
     # if it was attached before (your drive was still configured in /etc/fstab):

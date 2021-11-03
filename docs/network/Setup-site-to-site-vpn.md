@@ -43,6 +43,7 @@ You don't need a big instance. ec1.xsmall or ec1.small should be enough.
 openstack server create --flavor ec1.small --image Ubuntu-20.04 --network external --network <your_private> --key-name <ssh_key_name> wg-router
 ```
 
+Tip: Add a user, with a password for yourself, and add yourself to the sudo group. This way you can always recover access to your host via the cloud console if you misconfigured the network and locked yourself out.
 
 ### 3. Setting up a wireguard tunnel
 
@@ -81,9 +82,13 @@ sysctl -p
 ```
 
 ### 5. Security
-It is important to review the security implications that your new router has.  
+It is very important to review the security implications that your new router has!
 
-If your router host is accessible on a public IP (because it needs to be reached as an endpoint for the tunnel), you should make sure that you add firewall rules to block the internet from using it as a gateway into your network. If you started your VM with both an external and a private networks interface you can DROP everything incoming on that interface, except the VPN connection.
+If your router host is accessible on a public IP (because it needs to be reached as an endpoint for the tunnel), you should make sure that you add firewall rules to block the internet from using it as a gateway into your network. If you started your VM with both an external and a private network interface you can DROP all forwarding traffic from the public network interface.
+
+```
+sudo iptables -A FORWARD -i ens6 -j DROP
+```
 
 It is also a good idea to review if you want all traffic coming in over the tunnel connection to access everything, and put restrictions where applicable.
 

@@ -25,5 +25,5 @@ nav:
   - Kubernetes:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
-      - scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
+      - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
 theme: readthedocs

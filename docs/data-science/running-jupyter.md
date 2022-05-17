@@ -5,7 +5,7 @@ Create a VM with NVIDIA drivers, CUDA, cuDNN, and Tensorflow or Pytorch.
 Create a security group for jupyter:
 From you local machine run
 ```shell
-openstack security group create jupyter --descption "Jupyter notebook"
+openstack security group create jupyter --description "Jupyter notebook"
 openstack security group rule create jupyter --protocol TCP --dst-port 8888:8888 --remote-ip 0.0.0.0/0
 ```
 

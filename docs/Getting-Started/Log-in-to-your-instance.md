@@ -41,7 +41,7 @@ chmod 400 [name of your key pair].pem
 Now log in using the following command: 
 
 ``` shell
-ssh -1 [key pair name].pem [os_name]@[Public IP]
+ssh -i [key pair name].pem [os_name]@[Public IP]
 ```
 
 You have logged in to your instance

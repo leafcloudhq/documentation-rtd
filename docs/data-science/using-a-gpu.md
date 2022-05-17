@@ -7,7 +7,7 @@ In this tutorial we're going to:
 ## Start an Instance
 
 We are going to create an Ubuntu 20.04 based Virtual Machine instance.
-You can start an instance either using the OpenStack CLI, or using the Horizon web interface.
+You can start an instance either using the [*OpenStack CLI*](https://docs.leaf.cloud/en/latest/Getting-Started/Using-Openstack-CLI/), or using the Horizon web interface.
 
 On the CLI:
 ```shell

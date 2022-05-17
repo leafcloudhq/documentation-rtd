@@ -27,7 +27,8 @@ nav:
       - Creating a site to site VPN: network/Setup-site-to-site-vpn.md
       - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
   - Orchestration:
-      - Creating instances: terraform/creating-instances.md
+      - Terraform:
+          - Creating instances: terraform/creating-instances.md
   - Kubernetes:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md

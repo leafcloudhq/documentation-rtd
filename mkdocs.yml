@@ -1,7 +1,7 @@
 site_name: Leafcloud Tutorials
 nav:
   - Home: index.md
-    - Getting Started:
+  - Getting Started:
       - Changing your Password: Getting-Started/Changing-your-password.md
       - Launching an Instance: Getting-Started/Launching-an-instance.md
       - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
@@ -26,9 +26,8 @@ nav:
       - Creating a Load Balancer: network/Creating-a-load-balancer.md
       - Creating a site to site VPN: network/Setup-site-to-site-vpn.md
       - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
-    - Orchestration:
-        - Terrafrom:
-          - Creating instances: terraform/creating-instances.md
+  - Orchestration:
+      - Creating instances: terraform/creating-instances.md
   - Kubernetes:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md

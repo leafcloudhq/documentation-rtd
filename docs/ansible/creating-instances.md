@@ -30,9 +30,11 @@ ansible-galaxy collection install openstack.cloud
 ## Create your playbooks
 
 The following playbook `create-server.yaml` will create:
+
 - A security group for http
-- Create a security group rule for http
-- Create a an ec1.small VM instance
+- A security group rule for http
+- A an ec1.small VM instance
+
 ```shell
 ---
   - name: Create a new instance and attaches to a network and passes metadata to the instance

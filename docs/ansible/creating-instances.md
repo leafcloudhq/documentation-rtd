@@ -56,11 +56,6 @@ The following playbook `create-server.yaml` will create:
       - name: Create the server
         openstack.cloud.server:
           state: present
-          auth:
-            auth_url: https://create.leaf.cloud:5000
-            username: you@yourcompany.test
-            password: <password>
-            project_name: my-project
           name: test-ansible
           image: 0e98efbf-de1e-4e58-bf77-1ca80668e305
           key_name: my_key

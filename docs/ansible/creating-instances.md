@@ -1,13 +1,6 @@
 # Creating an instance with Ansible
 In this tutorial I'm going to show an example of how to start a server and run a `apache2` on Leafcloud, using Ansible.
 
-
-## Configure the CLI if you have not done so already.
-Login to Leafcloud, go to "identity", create and download "application credentials" as clouds.yaml. Now copy or move this file to ~/.config/openstack/clouds.yaml
-
-Finally; tell the Openstack client to use your cloud: 
-`export OS_CLOUD=openstack`. I recommend putting this in your .bash_rc (linux) or .profile (mac) file, so it sets this in your shell on launch.
-
 ## Install ansible
 
 you can use te package manager of your linux distribution
@@ -63,8 +56,8 @@ The following playbook `create-server.yaml` will create:
           state: present
           auth:
             auth_url: https://create.leaf.cloud:5000
-            username: jegor@leaf.cloud
-            password: nUwSqs2gAWTtX9CU
+            username: you@yourcompany.test
+            password: <password>
             project_name: leaf-test
           name: test-ansible
           image: 0e98efbf-de1e-4e58-bf77-1ca80668e305

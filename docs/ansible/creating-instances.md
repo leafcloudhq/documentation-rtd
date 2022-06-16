@@ -32,7 +32,7 @@ ansible-galaxy collection install openstack.cloud
 The following playbook `create-server.yaml` will create:
 - A security group for http
 - Create a security group rule for http
-- Create a an ec1.medium VM instance
+- Create a an ec1.small VM instance
 ```shell
 ---
   - name: Create a new instance and attaches to a network and passes metadata to the instance
@@ -58,10 +58,10 @@ The following playbook `create-server.yaml` will create:
             auth_url: https://create.leaf.cloud:5000
             username: you@yourcompany.test
             password: <password>
-            project_name: leaf-test
+            project_name: my-project
           name: test-ansible
           image: 0e98efbf-de1e-4e58-bf77-1ca80668e305
-          key_name: jegor_laptop
+          key_name: my_key
           timeout: 200
           flavor: ec1.small
           nics:

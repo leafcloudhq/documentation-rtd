@@ -37,11 +37,11 @@ The following playbook `create-server.yaml` will create:
 
 ```shell
 ---
-  - name: Creates a new instance and attaches it to a network, and passes the metadata to the instance
+  - name: Create a new instance and attaches it to a network, and passes the metadata to the instance
     hosts: localhost
     connection: local
     tasks:
-      - name: Create a http security group
+      - name: Create an http security group
         openstack.cloud.security_group:
           state: present
           name: http-hello-world

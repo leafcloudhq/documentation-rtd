@@ -33,7 +33,7 @@ The following playbook `create-server.yaml` will create:
 
 - A security group for http
 - A security group rule for http
-- A ec1.small VM instance
+- An ec1.small VM instance
 
 ```shell
 ---

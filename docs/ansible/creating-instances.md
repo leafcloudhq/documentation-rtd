@@ -1,5 +1,5 @@
 # Creating an instance with Ansible
-In this tutorial I'm going to show an example of how to start a server and run a `apache2` webserver on Leafcloud, using Ansible.
+In this tutorial I'm going to show an example of how to start a server and run an `apache2` webserver on Leafcloud, using Ansible.
 
 ## Install ansible
 

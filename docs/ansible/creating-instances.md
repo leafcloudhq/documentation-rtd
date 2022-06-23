@@ -1,5 +1,5 @@
 # Creating an instance with Ansible
-In this tutorial I'm going to show an example of how to start a server and run a `apache2` on Leafcloud, using Ansible.
+In this tutorial I'm going to show an example of how to start a server and run an `apache2` webserver on Leafcloud, using Ansible.
 
 ## Install ansible
 
@@ -20,7 +20,7 @@ pip can be used on any operating system:
 pip install ansible
 ```
 
-## Install the openstack.cloud cllection
+## Install the openstack.cloud collection
 
 To be able to create a server on Leafcloud you will need an extra module collection
 ```shell
@@ -33,11 +33,11 @@ The following playbook `create-server.yaml` will create:
 
 - A security group for http
 - A security group rule for http
-- A an ec1.small VM instance
+- An ec1.small VM instance
 
 ```shell
 ---
-  - name: Create a new instance and attaches to a network and passes metadata to the instance
+  - name: Create a new instance and attaches it to a network, and passes the metadata to the instance
     hosts: localhost
     connection: local
     tasks:

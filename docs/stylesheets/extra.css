@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "Euclid";
+    src: url("../assets/fonts/EuclidCircularB-Light-WebS.woff") format("woff2"),
+         url("../assets/fonts/EuclidCircularB-Light-WebS.woff") format("woff");
+  }
+  
+
+  :root {
+    --md-text-font: "Euclid"; 
+  }
+
+  :root > * {
+    --md-accent-fg-color:        rgb(94, 94, 94);
+    --md-accent-fg-color--dark:  #4A4A4A;
+    --md-primary-fg-color:        #D2EAF3;
+    --md-primary-fg-color--light: #fffff2;
+    --md-primary-fg-color--dark:  #fffff2;
+    --md-footer-bg-color: #CAFFCF;
+    --md-footer-fg-color: #363636;
+    --md-default-bg-color: #fffff2;
+    --md-typeset-a-color: #3FA9F5;
+    --md-primary-bg-color: #363636;
+    --md-default-fg-color--light: #333;
+
+  }
+
+.md-footer__title {
+    font-weight: bold;
+}
+
+  .md-footer-meta__inner {
+    display: none;
+  }
+
+  .md-header--shadow {
+    box-shadow: none;
+    box-shadow:rgba(94, 94, 94, 0.3) 5px 0 5px
+  }

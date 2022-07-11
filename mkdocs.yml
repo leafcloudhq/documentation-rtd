@@ -1,4 +1,4 @@
-site_name: Leafcloud Tutorials
+site_name: Leafcloud Documentation
 nav:
   - Home: index.md
   - Getting Started:
@@ -8,9 +8,6 @@ nav:
       - Configuring Security groups: Getting-Started/Configuring-security-groups.md
       - Key Pairs: Getting-Started/Key-pairs.md
       - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
-  - Volumes:
-      - Creating a Volume: volumes/Creating-a-new-volume.md
-      - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
   - Volumes:
       - Creating a Volume: volumes/Creating-a-new-volume.md
       - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
@@ -39,4 +36,11 @@ nav:
 #      - Using a GPU: data-science/using-a-gpu.md
 #      - Running Jupyter: data-science/running-jupyter.md
 
-theme: readthedocs
+theme: 
+  name: material
+  logo: assets/image/leaflogo-no-label.png
+  favicon: assets/image/favi.png
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css

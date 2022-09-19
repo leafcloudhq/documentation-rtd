@@ -1,4 +1,4 @@
-site_name: Leafcloud Tutorials
+site_name: Leafcloud Documentation
 nav:
   - Home: index.md
   - Getting Started:
@@ -28,7 +28,9 @@ nav:
       - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
   - Orchestration:
       - Terraform:
-          - Creating instances: terraform/creating-instances.md
+        - Creating instances: terraform/creating-instances.md
+      - Ansible:
+        - Creating instances: ansible/creating-instances.md
   - Kubernetes:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
@@ -36,5 +38,12 @@ nav:
   - Data Science:
       - Using a GPU: data-science/using-a-gpu.md
       - Running Jupyter: data-science/running-jupyter.md
-
-theme: readthedocs
+      - Running Jupyter: data-science/running-jupyter.md
+theme: 
+  name: material
+  logo: assets/image/leaflogo-no-label.png
+  favicon: assets/image/favi.png
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css

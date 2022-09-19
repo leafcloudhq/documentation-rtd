@@ -1,4 +1,4 @@
-# Running jupyter
+# Running Jupyter
 
 Create a VM with NVIDIA drivers, CUDA, cuDNN, and Tensorflow or Pytorch.
 

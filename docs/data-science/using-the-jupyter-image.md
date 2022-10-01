@@ -7,7 +7,7 @@ For convenience, Leafcloud offers a pre-built image with Nvidia CUDA and CuDNN, 
 To start an instance using this image, go to the instance view of the [dashboard](https://create.leaf.cloud/project/instances/).
 1. Press Launch intance
 1. in the Source tab select "Image" and the boot source
-1. select the `jupyter-notebook` image
+1. select the `ubuntu-pytorch-tensorflowf-jupyter` image
 1. as the flavor select any gpu flavor, starting with `eg1.`
 1. Select a network, to give the instance a public IP address use the `external` network
 1. Select a key pair, this should will be used to `SSH` into the machine

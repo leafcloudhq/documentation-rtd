@@ -11,6 +11,9 @@ nav:
   - Volumes:
       - Creating a Volume: volumes/Creating-a-new-volume.md
       - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
+  - Volumes:
+      - Creating a Volume: volumes/Creating-a-new-volume.md
+      - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
       - Live Volume extension: volumes/Live-volume-extension.md
       - Resizing (extending) a Volume: volumes/Resizing-a-volume.md
       - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
@@ -22,7 +25,7 @@ nav:
       - Floating IP: network/Floating-IP.md
       - Creating a Load Balancer: network/Creating-a-load-balancer.md
       - Creating a site to site VPN: network/Setup-site-to-site-vpn.md
-#      - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
+      - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
   - Orchestration:
       - Terraform:
         - Creating instances: terraform/creating-instances.md
@@ -32,11 +35,11 @@ nav:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
       - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
-#  - Data Science:
-#      - Using a GPU: data-science/using-a-gpu.md
-#      - Running Jupyter: data-science/running-jupyter.md
-
-theme: 
+  - Data Science:
+      - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
+      - Setting up TensorFlow GPU: data-science/using-a-gpu.md
+      - Setting up Jupyter: data-science/running-jupyter.md
+theme:
   name: material
   logo: assets/image/leaflogo-no-label.png
   favicon: assets/image/favi.png

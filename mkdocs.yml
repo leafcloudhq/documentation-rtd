@@ -36,10 +36,10 @@ nav:
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
       - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
   - Data Science:
-      - Using a GPU: data-science/using-a-gpu.md
-      - Running Jupyter: data-science/running-jupyter.md
-      - Running Jupyter: data-science/running-jupyter.md
-theme: 
+      - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
+      - Setting up TensorFlow GPU: data-science/using-a-gpu.md
+      - Setting up Jupyter: data-science/running-jupyter.md
+theme:
   name: material
   logo: assets/image/leaflogo-no-label.png
   favicon: assets/image/favi.png

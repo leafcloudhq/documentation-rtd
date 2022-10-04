@@ -5,6 +5,7 @@ For convenience, Leafcloud offers a pre-built image with Nvidia CUDA and CuDNN, 
 ## Launching the instance
 
 To start an instance using this image, go to the instance view of the [dashboard](https://create.leaf.cloud/project/instances/).
+
 1. Press Launch intance
 1. in the Source tab select "Image" and the boot source
 1. select the `ubuntu-pytorch-tensorflowf-jupyter` image

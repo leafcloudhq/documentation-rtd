@@ -1,0 +1,10 @@
+#Read Me Leafcloud tutorials
+
+##to build follow these steps:
+
+```
+pip instal mkdocs
+mkdocs build
+```
+
+this generates a directory called site with a file called index.html that you can open by accesing through the directory or opening in browser.

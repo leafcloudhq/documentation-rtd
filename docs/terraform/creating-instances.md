@@ -7,11 +7,20 @@ In this tutorial I'm going to show an example of how to setup a highly available
 Login to Leafcloud, go to "identity", create and download "application credentials" as clouds.yaml. Now copy or move this file to ~/.config/openstack/clouds.yaml
 
 Finally; tell the Openstack client to use your cloud: 
-`export OS_CLOUD=openstack`. I recommend putting this in your .bash_rc (linux) or .profile (mac) file, so it sets this in your shell on launch.
 
-If you have not used the OpenStack CLI, this is also a good moment to install that. Installing is as simple as `pip install python-openstackclient`
+`export OS_CLOUD=openstack`
 
-Then try: `openstack image list`. If it returns a list of available server images your setup was correct.
+ I recommend putting this in your .bash_rc (linux) or .profile (mac) file, so it sets this in your shell on launch.
+
+If you have not used the OpenStack CLI, this is also a good moment to install that. Installing is as simple as 
+
+`pip install python-openstackclient`
+
+Then try: 
+
+`openstack image list`
+
+If it returns a list of available server images your setup was correct.
 
 ## Setup Terraform with the OpenStack driver
 Terraform will read all files with `.tf` a extension, but if you follow this guide your folder will look something like this:

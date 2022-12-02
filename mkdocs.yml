@@ -29,4 +29,6 @@ nav:
       - Implementing Logrotate: kubernetes/implementing-logrotate.md
   - Claris Filemaker:
       - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md    
+  - Nextcloud:
+    - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md     
 theme: readthedocs

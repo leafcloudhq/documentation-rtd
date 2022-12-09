@@ -32,14 +32,11 @@ nav:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
       - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
-<<<<<<< HEAD
       - Implementing Logrotate: kubernetes/implementing-logrotate.md
   - Claris Filemaker:
       - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md    
   - Nextcloud:
     - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md     
-theme: readthedocs
-=======
   - Data Science:
       - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
       - Setting up TensorFlow GPU: data-science/using-a-gpu.md
@@ -52,4 +49,3 @@ extra:
   generator: false
 extra_css:
   - stylesheets/extra.css
->>>>>>> 582202ea5f3284387aa2b75c374e47857bae1228

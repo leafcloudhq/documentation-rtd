@@ -1,4 +1,7 @@
 .idea/
 site/
+<<<<<<< HEAD
 openstack_venv/
+=======
+>>>>>>> 582202ea5f3284387aa2b75c374e47857bae1228
 venv/

@@ -87,8 +87,8 @@ kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
  name: cinder-csi
- labels:
- storageclass.kubernetes.io/is-default-class: "true"
+ annotations:
+  storageclass.kubernetes.io/is-default-class: "true"
 provisioner: cinder.csi.openstack.org
 ```
 

@@ -1,7 +1,7 @@
-site_name: Leafcloud Tutorials
+site_name: Leafcloud Documentation
 nav:
   - Home: index.md
-  - Getting-Started:
+  - Getting Started:
       - Changing your Password: Getting-Started/Changing-your-password.md
       - Launching an Instance: Getting-Started/Launching-an-instance.md
       - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
@@ -22,13 +22,34 @@ nav:
       - Floating IP: network/Floating-IP.md
       - Creating a Load Balancer: network/Creating-a-load-balancer.md
       - Creating a site to site VPN: network/Setup-site-to-site-vpn.md
+      - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
+  - Orchestration:
+      - Terraform:
+        - Creating instances: terraform/creating-instances.md
+      - Ansible:
+        - Creating instances: ansible/creating-instances.md
   - Kubernetes:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
       - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
+<<<<<<< HEAD
       - Implementing Logrotate: kubernetes/implementing-logrotate.md
   - Claris Filemaker:
       - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md    
   - Nextcloud:
     - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md     
 theme: readthedocs
+=======
+  - Data Science:
+      - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
+      - Setting up TensorFlow GPU: data-science/using-a-gpu.md
+      - Setting up Jupyter: data-science/running-jupyter.md
+theme:
+  name: material
+  logo: assets/image/leaflogo-no-label.png
+  favicon: assets/image/favi.png
+extra:
+  generator: false
+extra_css:
+  - stylesheets/extra.css
+>>>>>>> 582202ea5f3284387aa2b75c374e47857bae1228

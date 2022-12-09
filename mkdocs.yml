@@ -33,6 +33,7 @@ nav:
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
       - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
       - Implementing Logrotate: kubernetes/implementing-logrotate.md
+      - Creating and resizing node groups: kubernetes/creating-and-resizing-node-groups.md
   - Claris Filemaker:
       - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md    
   - Nextcloud:

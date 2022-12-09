@@ -127,7 +127,7 @@ $ openstack coe cluster resize ${cluster_name} 1 --nodegroup big-worker \
 Request to resize cluster test-galal-resize has been accepted.
 ```
 
-We can suspend our workers (instances) inside specific node group if we want, buy suspending the stack 
+We can suspend our workers (instances) inside specific node group if we want, by suspending the stack 
 
 ```bash
 $ openstack stack suspend cae60638-86c9-474a-8039-5fe4b5ca9cd1
@@ -166,7 +166,7 @@ $ openstack stack resource list cae60638-86c9-474a-8039-5fe4b5ca9cd1 --fit-width
 +---------------------------+--------------------------------------+-------------------------+------------------+----------------------+
 ```
 
-To resume node group work again
+To resume the node group work
 
 ```bash
 $ openstack stack resume cae60638-86c9-474a-8039-5fe4b5ca9cd1
@@ -186,4 +186,4 @@ $ openstack stack resource list cae60638-86c9-474a-8039-5fe4b5ca9cd1 --fit-width
 +---------------------------+--------------------------------------+-------------------------+-----------------+----------------------+
 ```
 
-Now all resources in this stack are back to work
+Now all of the resources in this stack are back to work

@@ -2,3 +2,4 @@
 site/
 openstack_venv/
 venv/
+.DS_Store

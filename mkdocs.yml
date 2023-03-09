@@ -21,7 +21,7 @@ nav:
       - Creating a Router: network/Creating-a-new-router.md
       - Floating IP: network/Floating-IP.md
       - Creating a Load Balancer: network/Creating-a-load-balancer.md
-      - Creating a Load Balancer with offload SSL-Certificate: network/creating-a-loadbalancer-with-offload-ssl-certificate.md
+      - Creating a Load Balancer with offload SSL-Certificate: network/Creating-a-load-balancer-with-offload-SSL-Certificate.md
       - Creating a site to site VPN: network/Setup-site-to-site-vpn.md
       - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
   - Orchestration:

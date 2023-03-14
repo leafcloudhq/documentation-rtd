@@ -1,6 +1,6 @@
 # Live volume extension 
 
-**Note: before you start this tutorial, please create a backup of your volume. You can find a tutorial for that here.**
+**Note: before you start this tutorial, please create a backup of your volume. You can find a tutorial for that [here](https://docs.leaf.cloud/en/latest/volumes/Creating-a-volume-backup/).**
 
 Often, you can find yourself unsure what amount of storage an instance will need. You may start it at a certain size before realizing you need more space once it’s running. While adding more space to a volume is straightforward, doing so while keeping it in use can pose problems. This tutorial will teach you how to extend the size of a secondary volume, without having to unmount it first. This allows you to add more space to your instance while keeping it running. 
  

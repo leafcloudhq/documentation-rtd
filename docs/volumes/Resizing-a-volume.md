@@ -1,5 +1,7 @@
 # Resizing (extending) a volume
 
+**Note: before you start this tutorial, please create a backup of your volume. You can find a tutorial for that here.**
+
 Sometimes you find yourself in the situation that the disk you provisioned for your server is not large enough. It can then be really useful to resize the volume. 
 
 This works best if your server runs a compatible filesystem and OS. We do not support Windows at this time.

@@ -11,6 +11,7 @@ nav:
   - Volumes:
       - Creating a Volume: volumes/Creating-a-new-volume.md
       - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
+      - Creating a Volume Backup: volumes/Creating-a-volume-backup.md
       - Live Volume extension: volumes/Live-volume-extension.md
       - Resizing (extending) a Volume: volumes/Resizing-a-volume.md
       - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md

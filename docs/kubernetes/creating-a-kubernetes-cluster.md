@@ -38,7 +38,7 @@ openstack coe cluster template list
 ``` 
  
 Choose the one that best fits your needs. In this tutorial we'll be using:
-`k8s-fedora-coreos-32-ha-octavia-ingress`
+`k8s-ha-v1.21.2-template-v2.0-rc3`
 
 The template that we're going to use has support for:
 - ingress load balancing based on octavia high availability load balancers.

@@ -49,10 +49,10 @@ We support our pre-configured templates, if you want to use custom templates or 
 
 ## Create a Cluster 
 
-Now that we have chosen a template we can create a new cluster, with --keypair we select the keypair that will be added to the hosts, so you can access the hosts root over SSH. (default user is 'core')
+Now that we have chosen a template we can create a new cluster, with --keypair we select the keypair that will be added to the hosts, so you can access the hosts root over SSH (default user is 'core'). The keypair we're adding is the Openstack keypair name. 
 
 ```
-openstack coe cluster create my-k8s-cluster --cluster-template k8s-fedora-coreos-32-ha-octavia-ingress --keypair <keypair>  
+openstack coe cluster create my-k8s-cluster --cluster-template k8s-ha-v1.21.2-template-v2.0-rc3 --keypair <keypair>  
 ```
 
 This process may take a few minutes. To check up on the installation enter the following: 

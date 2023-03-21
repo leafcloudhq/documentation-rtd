@@ -32,6 +32,8 @@ nav:
         - Creating instances: ansible/creating-instances.md
   - Kubernetes:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
+      - Installing Helm: kubernetes/installing-helm.md
+      - Adding NGINX Ingress With Letsencrypt: kubernetes/ingress-with-nginx-letsencrypt.md
       - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
       - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
       - Implementing Logrotate: kubernetes/implementing-logrotate.md

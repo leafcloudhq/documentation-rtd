@@ -5,7 +5,7 @@ This tutorial will show you how to log in to your instance
 Open your terminal and enter the following:
 
 ``` shell
-ssh [os_name]@[Instance Public IP Address]
+ssh [instance os_name]@[Instance Public IP Address]
 ```
 
 So, for example: 

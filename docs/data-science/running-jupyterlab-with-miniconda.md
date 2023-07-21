@@ -32,7 +32,7 @@ To create the new instance, go to the instance view of the [dashboard](https://c
 1. Press Launch instance
 1. In the Source tab select "Image" and the boot source
 1. Select the `Ubuntu-22.04` image
-1. Set the volume size to 40GB
+1. Set the volume size to a minimum of 40GB and increase it according to the demands of your installation.
 1. As the flavor select any gpu flavor, starting with `eg1`.
 1. Select a network, to give the instance a public IP address use the `external` network
 1. Select a key pair, this key pair will be used to `SSH` into the machine

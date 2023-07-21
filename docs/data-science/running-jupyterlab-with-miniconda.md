@@ -18,24 +18,25 @@ Go to the security groups view of the network section [Security groups](https://
 1. Press Create Security Group
 1. Name the security group "jupyter-hub" and add a fitting description
 1. Press Create Security Group
-1. Locate you newly created security group in the overview and press "Manage Rules".
+1. Locate your newly created security group in the overview and press "Manage Rules".
 1. Press Add rule
 
 ![securitygroup-rule-jupiter](../images/securitygroup-rule-jupiter.png)
 
-1. Click add.
+1. Fill in the form according to the picture and click add.
 
 ## Creating the instance
 
 To create the new instance, go to the instance view of the [dashboard](https://create.leaf.cloud/project/instances/).
 
 1. Press Launch instance
-1. in the Source tab select "Image" and the boot source
-1. select the `Ubuntu-22.04` image
-1. set the volume size to 40GB
-1. as the flavor select any gpu flavor, starting with `eg1`.
+1. In the Source tab select "Image" and the boot source
+1. Select the `Ubuntu-22.04` image
+1. Set the volume size to 40GB
+1. As the flavor select any gpu flavor, starting with `eg1`.
 1. Select a network, to give the instance a public IP address use the `external` network
-1. Select a key pair, this should will be used to `SSH` into the machine
+1. Select a key pair, this key pair will be used to `SSH` into the machine
+1. Add the jupyter-hub security group
 1. Press "Launch Instance"
 1. Wait until instance reaches running status.
 
@@ -56,9 +57,9 @@ Once you've connected to your instance you can proceed to update it:
     sudo apt -y autoclean
 
 
-## Install nvidia drivers
+## Install NVIDIA drivers
 
-You can find the latest version of nvidia drivers here:
+You can find the latest version of NVIDIA drivers here:
 https://packages.ubuntu.com/search?suite=default&section=all&arch=any&keywords=nvidia-driver-&searchon=names
 
 Install the latest driver
@@ -68,13 +69,14 @@ sudo apt install nvidia-driver-535-server
 
 ```
 
-After succesfully installing the nvidea driver reboot your instance
+After succesfully installing the NVIDIA driver reboot your instance
 
 ``` shell
 sudo reboot
 ```
 
 Connect to your instance again after reboot. 
+
 Check that the drivers are correctly installed and active:
 
 ``` shell
@@ -117,5 +119,5 @@ You can now start your JupyterHub server by running:
 jupyter lab --ip [Instance Public IP] --port 8000
 ```
 
-In your webbrowser you can now access Yupiterlab:
-http://[Instance Public IP Address]:8000
+In the console logs you can find the startup url of Jupyterlab.
+This also contains the authorisation token.

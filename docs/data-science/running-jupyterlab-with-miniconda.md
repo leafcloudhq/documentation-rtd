@@ -69,7 +69,7 @@ sudo apt install nvidia-driver-535-server
 
 ```
 
-After succesfully installing the NVIDIA driver reboot your instance
+After successfully installing the NVIDIA driver reboot your instance
 
 ``` shell
 sudo reboot

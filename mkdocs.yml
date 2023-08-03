@@ -46,6 +46,7 @@ nav:
       - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
       - Setting up TensorFlow GPU: data-science/using-a-gpu.md
       - Setting up Jupyter: data-science/running-jupyter.md
+      - Setting up Jupyterlab with Miniconda: data-science/running-jupyterlab-with-miniconda.md
 theme:
   name: material
   logo: assets/image/leaflogo-no-label.png

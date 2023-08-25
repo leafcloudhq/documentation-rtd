@@ -38,6 +38,7 @@ nav:
       - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
       - Implementing Logrotate: kubernetes/implementing-logrotate.md
       - Creating and resizing node groups: kubernetes/creating-and-resizing-node-groups.md
+      - Creating a FerretDB database: kubernetes/creating-a-ferretdb-database.md
   - Claris Filemaker:
       - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md    
   - Nextcloud:

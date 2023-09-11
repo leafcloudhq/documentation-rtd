@@ -8,82 +8,110 @@ Before starting this tutorial, make sure you have completed all the steps in the
 
 First, we'll install the PostgreSQL Operator:
 
-``` 
-kubectl create namespace pgo 
-kubectl apply -f https://raw.githubusercontent.com/CrunchyData/postgres-operator/v4.6.0/installers/kubectl/postgres-operator.yml 
-``` 
-
-## Install the pgo Client 
-
-When the PostgreSQL Operator install is finished, run the client setup script: 
-
-``` 
-curl https://raw.githubusercontent.com/CrunchyData/postgres-operator/v4.6.0/installers/kubectl/client-setup.sh > client-setup.sh 
-chmod +x client-setup.sh 
-``` 
-
-This will download the pgo client and provide instructions on how to use it in your environment. It will request the addition of certain variables, which will look something like: 
+clone the following repository:
 
 ```
-export PGOUSER="${HOME?}/.pgo/pgo/pgouser" 
-export PGO_CA_CERT="${HOME?}/.pgo/pgo/client.crt" 
-export PGO_CLIENT_CERT="${HOME?}/.pgo/pgo/client.crt" 
-export PGO_CLIENT_KEY="${HOME?}/.pgo/pgo/client.key" 
-export PGO_APISERVER_URL='https://127.0.0.1:8443' 
-export PGO_NAMESPACE=pgo 
-``` 
+git clone --depth 1 https://github.com/CrunchyData/postgres-operator-examples
 
-copy the variables as they are printed in ypur terminal and put them in your ~/.bashrc file on linux or in your ~/.bash_profile on mac and run source ~/.bashrc or ~/.bash_profile respectively
+```
 
-## Post-Installation Setup 
+This will create a namespace called postgres-operator and create all of the objects required to deploy PostgreSQL Operator.
 
-The PostgreSQL Operator is installed to the pgo namespace. First, check that the Kubernetes Deployment of the Operator exists and is healthy:
+```
+kubectl apply -k kustomize/install/namespace
+kubectl apply --server-side -k kustomize/install/default
 
 ``` 
-kubectl -n pgo get deployments 
-``` 
 
-Next, make sure the Pods that run the Operator are operational: 
 
-``` 
-kubectl -n pgo get pods 
-``` 
+To check on the status of your installation, you can run the following command:
 
-To communicate with the PostgreSQL Operator API server, you need to set up a port forward to your local environment. You can do this by opening a new terminal window and running the following: 
+```
+kubectl -n postgres-operator get pods \
+  --selector=postgres-operator.crunchydata.com/control-plane=postgres-operator \
+  --field-selector=status.phase=Running
 
-``` 
-kubectl -n pgo port-forward svc/postgres-operator 8443:8443 
-``` 
+```
 
-Now go back to your original terminal window and verify your connection to the PostgreSQL Operator: 
+Wait unitl pod is in the running status.
+
+Before creating the PostgreSQL cluster, we need to modify the ~/kustomize/postgres/postgres.yaml file from the cloned folder, and enable the cluster to use a data volume claim that specifies the 'cinder-csi' storage class and a capacity request of 1Gi. It should look like this:
 
 ``` 
-pgo version 
+apiVersion: postgres-operator.crunchydata.com/v1beta1
+kind: PostgresCluster
+metadata:
+  name: hippo
+spec:
+  image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-15.3-2
+  postgresVersion: 15
+  instances:
+    - name: instance1
+      dataVolumeClaimSpec:
+        accessModes:
+          - 'ReadWriteOnce'
+        resources:
+          requests:
+            storage: 1Gi
+        storageClassName: cinder-csi
+  backups:
+    pgbackrest:
+      image: registry.developers.crunchydata.com/crunchydata/crunchy-pgbackrest:ubi8-2.45-2
+      repos:
+        - name: repo1
+          volume:
+            volumeClaimSpec:
+              accessModes:
+                - 'ReadWriteOnce'
+              resources:
+                requests:
+                  storage: 1Gi
+              storageClassName: cinder-csi
 ``` 
 
-## Creating a PostgreSQL Cluster 
 
-This type of istall creates a pgo namespace, from which the PostgreSQL Operator manages PostgreSQL clusters. We'll start by creating a PostgreSQL cluster called leafdb: 
-
-``` 
-pgo create cluster -n pgo leafdb 
-``` 
-
-It may take a while for the cluster to be provisioned. You can see the cluster's status by using the pgo test command: 
+Now let's create the PostgreSQL cluster by running the following command:
 
 ``` 
-pgo test -n pgo leafdb 
-``` 
-
-This test command gives you the basic information to connect to your PostgreSQL cluster from inside your Kubernetes environment. For more detailed information, enter the following: 
+kubectl apply -k kustomize/postgres
 
 ``` 
-pgo show cluster -n pgo leafdb 
-``` 
 
-You have now created a PostgreSQL cluster. For more information on how to use the PostgreSQL Operator visit `https://postgres-operator.readthedocs.io/en/latest/`
+You can track the progress of your cluster using the following command:
 
+```
+kubectl -n postgres-operator describe postgresclusters.postgres-operator.crunchydata.com hippo
+```
+
+
+As part of creating a Postgres cluster, the Postgres Operator creates a PostgreSQL user account. The credentials for this account are stored in a Secret that has the name <clusterName>-pguser-<userName>.
+
+
+Retrieve the user's credentials:
+
+For username:
+
+```
+(kubectl -n postgres-operator get secrets hippo-pguser-hippo -o go-template='{{.data.password | base64decode}}')
+```
+
+For password:
+
+```
+(kubectl -n postgres-operator get secrets hippo-pguser-hippo -o go-template='{{.data.password | base64decode}}')
+```
  
- 
 
- 
+Test the connection by port-forwarding your localhost to the PostgreSQL Operator:
+
+
+ ```
+PG_CLUSTER_PRIMARY_POD=$(kubectl get pod -n postgres-operator -o name \
+  -l postgres-operator.crunchydata.com/cluster=hippo,postgres-operator.crunchydata.com/role=master)
+kubectl -n postgres-operator port-forward "${PG_CLUSTER_PRIMARY_POD}" 5432:5432
+```
+
+
+Now, you can try to login to your PostgreSQL installation on localhost:5432.
+
+Congratulations! You have now created a PostgreSQL cluster. For more details on how to use the PostgreSQL Operator, visit `https://postgres-operator.readthedocs.io/en/latest/`

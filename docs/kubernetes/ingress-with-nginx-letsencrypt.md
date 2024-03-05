@@ -58,6 +58,11 @@ spec:
             class: nginx
 ```
 
+To apply this configuration and create the ClusterIssuer in your Kubernetes cluster, you'll need to run the following command:
+```
+kubectl apply -f cluster-issues.yml
+```
+
 ## Testing the ClusterIssuer
 
 

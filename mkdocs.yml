@@ -3,6 +3,7 @@ nav:
   - Home: index.md
   - Getting Started:
       - Changing your Password: Getting-Started/Changing-your-password.md
+      - Enable 2fa: Getting-Started/enabling-2fa-for-openstack.md
       - Launching an Instance: Getting-Started/Launching-an-instance.md
       - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
       - Configuring Security groups: Getting-Started/Configuring-security-groups.md

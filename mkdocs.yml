@@ -9,6 +9,7 @@ nav:
       - Configuring Security groups: Getting-Started/Configuring-security-groups.md
       - Key Pairs: Getting-Started/Key-pairs.md
       - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
+      - Create a subdomain: Getting-Started/Creating-subdomain.md
   - Volumes:
       - Creating a Volume: volumes/Creating-a-new-volume.md
       - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md

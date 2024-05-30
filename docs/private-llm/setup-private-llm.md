@@ -4,6 +4,8 @@ Large language models (LLMs) are transforming the IT landscape, offering capabil
 
 At Leafcloud, a leading sustainable cloud provider, we recognize the environmental impact of large language models (LLMs) as a growing concern. Training and running these models can consume significant resources. That's why we focus on sustainability by using waste heat from GPUs to power water heating systems. This innovative method allows you to leverage the power of LLMs while significantly reducing your environmental footprint.
 
+In the first part of this series, I will guide you through setting up a large language model in Kubernetes and installing all necessary tools, while in the second part, I will demonstrate how to leverage the capabilities of your LLMs by creating custom chatbots, embedding your documents, and connecting your LLM to VS Code.
+
 ## Why Consider a Private LLM?
 
 Private LLMs offer several advantages:
@@ -189,7 +191,7 @@ extraEnv:
     value: "3"
 ```
 
-# User and Developer Authentication with AnythingLLM
+# Authentication
 
 AnythingLLM provides built-in authorization and authentication, enabling you to manage user roles and grant access to the chat environment for interacting with your private LLM. However, when it comes to developer access from your development environment (e.g., using the "code.dev" extension in Visual Studio Code), Ollama itself lacks built-in authentication.
 

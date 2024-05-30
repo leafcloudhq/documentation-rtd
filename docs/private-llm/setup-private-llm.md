@@ -47,7 +47,7 @@ To create a managed Kubernetes cluster using Gardener, follow these steps:
    settings can be left with default values.
 3. Configure Worker Group: <br> In this section, select the machine type for your cluster. This decision will impact factors like budget, user load, and the size of the models you plan to run. Refer to the explanation above for considerations when choosing your machine type. For more complex worker group configurations, consult the Gardener documentation.
 
-    Example:This tutorial will use Ollama with 2 replicas to run the Llama3 8B model (a relatively small model). A V100 or A30 machine with 2 GPUs is sufficient for this scenario. The image depicts selecting the appropriate machine type in the Gardener dashboard.  
+    Example: This tutorial will use Ollama with 2 replicas to run the Llama3 8B model (a relatively small model). A V100 or A30 machine with 2 GPUs is sufficient for this scenario. The image depicts selecting the appropriate machine type in the Gardener dashboard.  
 
 ![cluster dashboard](../images/llm-wordergroup.png)
 Click on the "Create" button to create your cluster. This process can take several minutes depending on the size of the machine you selected. Once the cluster is created, it will be listed in your Gardener dashboard.

@@ -47,6 +47,8 @@ nav:
       - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md    
   - Nextcloud:
     - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md     
+  - Large Language Models (LLMs):
+     - setup private llm on k8s: private-llm/setup-private-llm.md
   - Data Science:
       - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
       - Setting up TensorFlow GPU: data-science/using-a-gpu.md

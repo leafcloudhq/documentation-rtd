@@ -1,8 +1,8 @@
 # Unlock the Potential of Private LLMs with Sustainable Power
 
-Large language models (LLMs) are transforming the IT landscape, offering capabilities that were once science fiction. Public models like ChatGPT and Copilot showcase this potential, but for organizations with unique needs, data security concerns, and a focus on control, private LLMs offer a compelling advantage.
+Large language models (LLMs) are transforming the IT landscape, offering capabilities that were once science fiction. Public models like ChatGPT and Copilot demonstrate the potential of large language models. However, organizations with specific needs, data security concerns, and a desire for control may find private LLMs to be a better option.
 
-At Leafcloud, a leading sustainable cloud provider, we understand the environmental impact of LLMs is a growing concern. Training and running these models can be resource-intensive. That's why we champion sustainable practices like using waste heat from GPUs to power water heating systems. This innovative approach allows you to harness the power of LLMs while minimizing your environmental footprint.
+At Leafcloud, a leading sustainable cloud provider, we recognize the environmental impact of large language models (LLMs) as a growing concern. Training and running these models can consume significant resources. That's why we focus on sustainability by using waste heat from GPUs to power water heating systems. This innovative method allows you to leverage the power of LLMs while significantly reducing your environmental footprint.
 
 ## Why Consider a Private LLM?
 
@@ -15,20 +15,23 @@ Private LLMs offer several advantages:
 
 ### Is Setting Up a Private LLM Right for You?
 
-The good news is, setting up a private LLM has become more approachable thanks to a growing range of open-source tools and pre-trained models. While some technical expertise is still required, the process is no longer limited to just large organizations with extensive resources.
+Setting up a private LLM has become more approachable thanks to a growing range of open-source tools and pre-trained models. While some technical expertise is still required, the process is no longer limited to just large organizations with extensive resources.
 
-If you're intrigued by the potential of private LLMs and have a basic understanding of relevant technologies, don't be discouraged! This guide provides a roadmap to get you started. 
+If you're intrigued by the potential of private LLMs and have a basic understanding of relevant technologies, don't be discouraged! This guide provides a roadmap to get you started.
+
+The full code of this tutorial can be found here [https://github.com/leafcloudhq/private-llm-demo]
 
 ## The Setup 
 
-Here's a breakdown of the tools and technologies involved in setting up your private LLM environment:
+Here's a breakdown of the tools and technologies involved
 
 - **Managed Kubernetes Cluster with Gardener**: Gardener simplifies the creation and management of a Kubernetes cluster, which acts as the underlying platform for running your LLM model.
-- **Ollama**: Ollama is an open-source tool specifically designed for running large language models efficiently within a Kubernetes environment.
-- **AnythingLLM**: AnythingLLM provides a user interface and functionalities for interacting with your LLM model. It allows you to manage tasks, user access, and potentially fine-tune the model.
-- **Ingress NGINX**: Ingress NGINX acts as a traffic director, routing incoming requests to the appropriate components within your LLM setup.
-- **Certbot**: Certbot automates the management of SSL certificates, ensuring secure communication within your private LLM environment.
-- **chromadb**: ChromaDB is an open-source database that stores LLM embeddings. It enables you to add documents to your LLM model, allowing you to customize the model's responses based on specific documents or contexts..
+- **Ollama**: An open-source tool specifically designed for running large language models efficiently within a Kubernetes environment.
+- **AnythingLLM**: Provides a user interface and functionalities for interacting with your LLM model. It allows you to manage tasks, user access, and potentially fine-tune the model.
+- **Ingress NGINX**: Acts as a traffic director, routing incoming requests to the appropriate components within your LLM setup.
+- **Certbot**: Automates the management of SSL certificates, ensuring secure communication within your private LLM environment.
+- **chromadb**: An open-source database that stores LLM embeddings. It enables you to add documents to your LLM model, allowing you to customize the model's responses based on specific documents or contexts.
+
 
 This combination of open-source tools provides a secure and customizable foundation for leveraging the power of private large language models.
 
@@ -186,7 +189,61 @@ extraEnv:
     value: "3"
 ```
 
+# User and Developer Authentication with AnythingLLM
 
-## Installing.
+AnythingLLM provides built-in authorization and authentication, enabling you to manage user roles and grant access to the chat environment for interacting with your private LLM. However, when it comes to developer access from your development environment (e.g., using the "code.dev" extension in Visual Studio Code), Ollama itself lacks built-in authentication.
 
-T
+To address this temporarily, we’ve exposed Ollama outside the Kubernetes cluster and implemented basic authentication using NGINX ingress. Here’s how we achieved this:
+
+## Steps Involved:
+
+1. **Generating Credentials**: 
+   - We used the `htpasswd` command to create a username and password combination, which is stored in a file named "auth."
+
+```bash
+htpasswd -c auth myuser
+```
+
+2. **Creating a Kubernetes Secret**: 
+   - The "auth" file is then converted into a Kubernetes Secret named "basic-auth" using `kubectl` for secure storage.
+
+```bash
+kubectl create secret generic basic-auth --from-file=auth
+```
+
+3. **Configuring Ingress Authentication**: 
+   - The NGINX ingress configuration for Ollama is modified to include annotations specifying basic authentication with the following details:
+
+```yaml
+ annotations:
+    nginx.ingress.kubernetes.io/auth-type: "basic"
+    nginx.ingress.kubernetes.io/auth-secret: "basic-auth"
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required"
+```
+
+
+
+
+## Looking for a More Secure Solution
+
+While basic authentication provides a temporary workaround, we are actively seeking a more robust and lightweight solution for securing external access to Ollama. The ideal solution will balance security with ease of use for developers.
+
+
+
+In the ingress of ollama we added:
+
+```yaml
+ annotations:
+    nginx.ingress.kubernetes.io/auth-type: "basic"
+    nginx.ingress.kubernetes.io/auth-secret: "basic-auth"
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required"
+```
+
+# 5 Installing the Private LLM Environment
+Once you've configured your helmfile.yaml file (as described in the previous sections), you can install the entire private LLM environment using Helmfile. Here are the commands:
+
+```bash
+helmfile diff  # (Optional) Run this command to see what changes Helmfile will make before applying them.
+helmfile apply  # This command will install all the necessary components.
+
+```

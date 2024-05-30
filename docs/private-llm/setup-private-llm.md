@@ -1,6 +1,8 @@
-#  Unlocking Power and Privacy: Setting Up a Private Large Language Model
+# Unlock the Potential of Private LLMs with Sustainable Power
 
-Large language models (LLMs) have taken the IT world by storm with their impressive natural language processing abilities. Public models offer a glimpse of this potential, but  organizations with specific needs and a desire for complete control might find private LLMs a compelling option.
+Large language models (LLMs) are transforming the IT landscape, offering capabilities that were once science fiction. Public models like ChatGPT and Copilot showcase this potential, but for organizations with unique needs, data security concerns, and a focus on control, private LLMs offer a compelling advantage.
+
+At Leafcloud, a leading sustainable cloud provider, we understand the environmental impact of LLMs is a growing concern. Training and running these models can be resource-intensive. That's why we champion sustainable practices like using waste heat from GPUs to power water heating systems. This innovative approach allows you to harness the power of LLMs while minimizing your environmental footprint.
 
 ## Why Consider a Private LLM?
 
@@ -82,7 +84,7 @@ nvidia.com/gpu.product=NVIDIA-A30<br>
 
 In the resources sections the gpu should be listed<br>
 
-<img src="../images/llm-gpu-resources.png" align="left">
+
 
 ## 3. Assigning Public Access 
 
@@ -98,14 +100,93 @@ In this step, we'll create two subdomains:
 For detailed instructions on creating subdomains in Leafcloud, refer to this tutorial: [Leafcloud Documentation](https://docs.leaf.cloud/)
 
 
-## 4. Installing Ollama and AnythingLLM
-Next we are going to install all tools needed to run our LLM. We are going to use helmcharts for this purpose. With helmfile we can combine multiple helm charts into one file, which makes it easier to manage multiple services at once.
 
-I will highlicht some parts of the `helmfile.yaml` file that is used in this tutorial.
-The full version of the `helmfile.yaml` file can be found on our github.
+# 4. Streamlined Installation with Helmfile
 
+In this step, we'll focus on installing the necessary tools using Helm and Helmfile. Helm is a popular package manager for Kubernetes, and Helmfile helps us streamline the installation process by combining multiple Helm charts (think of them as pre-packaged configurations) into a single file (`helmfile.yaml`). This makes managing the installation and updates of various components much easier.
+
+We'll highlight relevant sections of the `helmfile.yaml` file to demonstrate how Ollama and AnythingLLM are configured. The full version of this file can be found on our GitHub repository.
+
+See here the installation instructions for helmfile:
+[https://github.com/helmfile/helmfile]
+
+## Helmfile Configuration
+
+The `helmfile.yaml` file consists of two main sections:
+
+### Repositories
+
+In this example, we've specified public repositories for most tools except AnythingLLM. For AnythingLLM, we decided to use Gimlet's onchart, which is a really nice and easy chart to use for generic applications.
+
+
+```yaml
 repositories:
   - name: nginx-stable
     url: https://helm.nginx.com/stable
   - name: jetstack
     url: https://charts.jetstack.io
+```
+
+
+### Releases
+
+This section defines individual software deployments using Helm charts. Here, we'll see how Ollama and AnythingLLM are configured, including details like chart versions, namespaces, and values files (which can hold specific configuration options).
+
+```yaml
+releases:
+ - name: ollama
+   namespace: anything-llm
+   chart: ollama-helm/ollama
+   labels:
+     app: ollama
+   createNamespace: true
+   version: "0.29.1"
+   values: [ "./ollama.yaml" ]
+```
+
+
+## Configuring Ollama and AnythingLLM
+While most of the Ollama configuration in the helmfile.yaml file is straightforward, here are some key points to highlight:
+
+Ingress Configuration:  For both Ollama and AnythingLLM, you'll need to set up the correct hostname in the ingress section. 
+
+
+### Ollama Specific Settings:
+
+- **GPU Support:** We've enabled GPU support in the Ollama configuration, assuming your cluster has GPUs available. This allows the model to leverage the processing power of GPUs for faster performance.
+- **Model Selection:** The configuration specifies the particular model to be used by Ollama. This model will be downloaded automatically when you first start the Ollama service.
+- **Persistence:** Persistence is enabled to ensure the downloaded model is not lost when pods restart. This means the model is stored on a persistent volume and shared between all Ollama replicas, improving efficiency.
+
+
+```yaml
+ollama:
+  gpu:
+    enabled: true
+    models:
+    - llama3
+persistentVolume:
+  enabled: true
+  size: 100Gi
+
+```
+
+## Advanced: Running Multiple Models Concurrently (Optional)
+
+Starting with Ollama version 0.1.33, you can run and respond to queries using multiple large language models simultaneously. This is useful if you have different models for various tasks.
+
+### Enabling Multi-Model Support
+
+Add these environment variables to your `helmfile.yaml` file:
+
+```yaml
+extraEnv:
+  - name: OLLAMA_NUM_PARALLEL
+    value: "3"
+  - name: OLLAMA_MAX_LOADED_MODELS
+    value: "3"
+```
+
+
+## Installing.
+
+T

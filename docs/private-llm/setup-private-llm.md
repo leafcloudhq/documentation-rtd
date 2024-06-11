@@ -231,16 +231,6 @@ kubectl create secret generic basic-auth --from-file=auth
 While basic authentication provides a temporary workaround, we are actively seeking a more robust and lightweight solution for securing external access to Ollama. The ideal solution will balance security with ease of use for developers.
 
 
-
-In the ingress of ollama we added:
-
-```yaml
- annotations:
-    nginx.ingress.kubernetes.io/auth-type: "basic"
-    nginx.ingress.kubernetes.io/auth-secret: "basic-auth"
-    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required"
-```
-
 # 5 Installing the Private LLM Environment
 Once you've configured your helmfile.yaml file (as described in the previous sections), you can install the entire private LLM environment using Helmfile. Here are the commands:
 

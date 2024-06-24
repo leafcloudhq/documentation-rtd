@@ -21,22 +21,22 @@ To change the IP range of your pods during cluster creation in Gardener, follow 
 
 2. **Modify the YAML Configuration**:
     - Add the following snippet to the networking section of the YAML configuration to specify the IP range for your pods:
-      ```yaml
-      networking:
-        pods: 192.168.0.0/22
-      ```
+```yaml
+networking:
+pods: 192.168.0.0/22
+```
 
 3. **Target Your Garden with the `gardenctl` Command**:
     - Open your terminal and run the following command to target your garden:
-      ```bash
-      gardenctl target --garden leafcloud-production --project <your-project-id>
-      ```
+```bash
+gardenctl target --garden leafcloud-production --project <your-project-id>
+```
 
 4. **Apply Your YAML Configuration**:
     - Apply the modified YAML configuration to create your shoot cluster with the specified pod IP range:
-      ```bash
-      gardenctl apply -f your-modified-cluster-config.yaml
-      ```
+```bash
+gardenctl apply -f your-modified-cluster-config.yaml
+```
 
 By following these steps, you can change the IP range of your pods during the cluster creation process in Gardener.
 

@@ -56,28 +56,28 @@ To use an existing OpenStack router during cluster creation in Gardener, follow 
 
 3. **Modify the YAML Configuration**:
     - Add the following snippet to the `provider` section of the YAML configuration to specify the router ID:
-      ```yaml
-      provider:
-        type: openstack
-        infrastructureConfig:
-          apiVersion: openstack.provider.extensions.gardener.cloud/v1alpha1
-          kind: InfrastructureConfig
-          networks:
-            workers: 10.250.0.0/16
-            router:
-              id: 43f4ed65-5486-4f00-a392-79f9e28f6e36
-      ```
+```yaml
+provider:
+type: openstack
+infrastructureConfig:
+    apiVersion: openstack.provider.extensions.gardener.cloud/v1alpha1
+    kind: InfrastructureConfig
+    networks:
+    workers: 10.250.0.0/16
+    router:
+        id: 43f4ed65-5486-4f00-a392-79f9e28f6e36
+```
 
 4. **Target Your Garden with the `gardenctl` Command**:
     - Open your terminal and run the following command to target your garden:
-      ```bash
-      gardenctl target --garden leafcloud-production --project <your-project-id>
-      ```
+```bash
+gardenctl target --garden leafcloud-production --project <your-project-id>
+```
 
 5. **Apply Your YAML Configuration**:
     - Apply the modified YAML configuration to create your shoot cluster with the specified router:
-      ```bash
-      gardenctl apply -f your-modified-cluster-config.yaml
-      ```
+```bash
+gardenctl apply -f your-modified-cluster-config.yaml
+```
 
 By following these steps, you can use an existing OpenStack router during the cluster creation process in Gardener.

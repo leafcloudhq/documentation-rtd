@@ -37,6 +37,7 @@ nav:
       - Installing and using gardenctl: gardener/gardenctl.md
       - Temporary kubeconfig: gardener/temporary-kubeconfig.md
       - Advanced network options: gardener/advanced-networking.md
+      - WebAssembly in kubernetes: gardener/serverless-webassembly.md
   - Kubernetes:
       - Creating a Kubernetes Cluster: kubernetes/creating-a-kubernetes-cluster.md
       - Installing Helm: kubernetes/installing-helm.md

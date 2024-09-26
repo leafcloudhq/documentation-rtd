@@ -58,7 +58,7 @@ The creation of the cluster might take around 6 minutes. Once finished, you will
 
 Once your cluster is up and running, accessing it securely is the next step. There are two primary methods to authenticate and interact with your cluster: using a static token or through `gardenctl` login.
 
-### Static Token
+## Static Token
 Use a static token for a quick and direct connection to your Kubernetes cluster. This approach is ideal for scripts and CI/CD pipelines.
 
 Follow these steps to use a static token for accessing your Kubernetes cluster:
@@ -83,27 +83,14 @@ Follow these steps to use a static token for accessing your Kubernetes cluster:
 
 ![creating new cluster](../images/access-cluster.png)
 
-### Gardenctl Access
+## Gardenctl Access
 
 For secure and dynamic access to your Kubernetes clusters, use `gardenctl`. Here's how to set it up:
 
-1. **Install Gardenlogin**
-   - Follow the [installation instructions](https://github.com/gardener/gardenlogin#installation) to install `gardenlogin` on your local machine.
+### Install Gardenlogin
+   - Follow the [installation instructions](gardenctl.md) to install `gardenlogin` on your local machine.
 
-2. **Download Personalized Kubeconfig**
-   - In the Gardener dashboard, click on the user icon and navigate to `My account`.
-   - Go to the `Access` tab and select `Kubeconfig` to download your personalized kubeconfig file.
-
-3. **Configure Gardenctl**
-   - Place the downloaded kubeconfig file under `~/.garden/` and rename it to `gardenctl-v2.yaml`.
-   - Edit the `gardenctl-v2.yaml` file to match the following content, substituting `<path-to-personalized-kubeconfig>` with the actual file path of your kubeconfig:
-     ```yaml
-     gardens:
-       - identity: leafcloud-production
-         kubeconfig: "<path-to-personalized-kubeconfig>"
-     ```
-
-4. **Target Your Cluster**
+### Target Your Cluster
    - Open a terminal and use the `gardenctl` command to target your cluster:
      ```shell
      gardenctl target --garden leafcloud-production --project <project-id> --shoot <cluster-name>
@@ -112,7 +99,7 @@ For secure and dynamic access to your Kubernetes clusters, use `gardenctl`. Here
    - Replace `<cluster-name>` with the name of your Kubernetes cluster.
    - `leafcloud-production` is the identity specified in your `gardenctl-v2.yaml` file.
 
-5. **Browser Authentication**
+### Browser Authentication
    - When you target your cluster using the `gardenctl` command, a browser session will automatically open for authentication.
    - Follow the on-screen instructions in the browser to authenticate and grant access.
    - After successful authentication, the browser will confirm that you can close the window and return to the terminal to manage your cluster with `gardenctl`.

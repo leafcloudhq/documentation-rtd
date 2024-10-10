@@ -24,6 +24,7 @@ jobs:
           out: '.' # this is the default, no need to specify unless you wish to override it
           args: >
             --nvdApiKey "${{ secrets.NVD_TOKEN }}"
+            --scan "docs/"
             --enableExperimental
       - uses: sonarsource/sonarqube-scan-action@master
         env:

@@ -20,7 +20,7 @@ jobs:
         with:
           project: 'documentation-rtd'
           path: 'docs'
-          format: 'JSON'
+          format: 'HTML'
           out: '.' # this is the default, no need to specify unless you wish to override it
           args: >
             --nvdApiKey "${{ secrets.NVD_TOKEN }}"

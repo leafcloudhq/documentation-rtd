@@ -4,7 +4,7 @@ Gardener Kubernetes is our managed Kubernetes service that helps with the deploy
 
 Gardener Kubernetes offers a user-friendly dashboard for those who prefer a graphical interface, making it easy to manage your clusters with just a few clicks. However, for those who like more control, everything can still be managed through YAML files, allowing you to specify precise configurations declaratively.
 
-Currently, Gardener is still in beta. If you want to start using this new managed Kubernetes platform, send an email to [support@leaf.cloud](mailto:support@leaf.cloud).
+Currently, Gardener is still in beta. If you want to start using this new managed Kubernetes platform, send an email to [hello@leaf.cloud](mailto:hello@leaf.cloud).
 
 
 

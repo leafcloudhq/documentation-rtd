@@ -29,9 +29,9 @@ nav:
       - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
   - Orchestration:
       - Terraform:
-        - Creating instances: terraform/creating-instances.md
+          - Creating instances: terraform/creating-instances.md
       - Ansible:
-        - Creating instances: ansible/creating-instances.md
+          - Creating instances: ansible/creating-instances.md
   - Managed Kubernetes:
       - Creating a Kubernetes Cluster: gardener/creating-a-kubernetes-cluster.md
       - Installing and using gardenctl: gardener/gardenctl.md
@@ -49,12 +49,14 @@ nav:
       - Implementing Logrotate: kubernetes/implementing-logrotate.md
       - Creating and resizing node groups: kubernetes/creating-and-resizing-node-groups.md
       - Creating a FerretDB database: kubernetes/creating-a-ferretdb-database.md
+  - Talos:
+      - Create Talos Kubernetes Cluster: talos/creating-talos-cluster.md
   - Claris Filemaker:
-      - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md    
+      - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md
   - Nextcloud:
-    - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md     
+      - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md
   - Large Language Models (LLMs):
-     - setup private llm on k8s: private-llm/setup-private-llm.md
+      - setup private llm on k8s: private-llm/setup-private-llm.md
   - Data Science:
       - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
       - Setting up TensorFlow GPU: data-science/using-a-gpu.md

@@ -1,10 +1,19 @@
 #Read Me Leafcloud tutorials
 
-##to build follow these steps:
+## Prerequisites
 
 ```
-pip install mkdocs
+pip install mkdocs mkdocs-material
+```
+
+## Building
+```
 mkdocs build
 ```
 
-this generates a directory called site with a file called index.html that you can open by accesing through the directory or opening in browser.
+this generates a directory called _site_ with a file called _index.html_ that you can open by accesing through the directory or opening in browser.
+
+## Development
+
+Using `mkdocs serve`, the built site is served on `localhost:8000` and rebuilt on changes
+

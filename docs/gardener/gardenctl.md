@@ -34,7 +34,7 @@ chmod +x "./gardenctl_v2_${os}_${arch}"
 sudo mv "./gardenctl_v2_${os}_${arch}" /usr/local/bin/gardenctl
 
 ```
-Next we'll install _gardenlogin_, which will identify us against the gardener ecosystem. The tool which works in tandem with Kubectl to provide OIDC authentication.
+Next we'll install _gardenlogin_, which will identify us against the gardener ecosystem. The tool works in tandem with Kubectl to provide OIDC authentication.
 ```bash
 # set operating system and architecture
 os=linux # choose between darwin, linux, windows

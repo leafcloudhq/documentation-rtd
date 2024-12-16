@@ -54,7 +54,15 @@ PUBLIC_IP=$(openstack floating ip create external | grep -oP '(?<=floating_ip_ad
 echo "PUBLIC_IP: $PUBLIC_IP"
 ```
 
-Hold on to the `$PUBLIC_IP`, we will need it in our next step! Our network should now look like this:
+Hold on to the `$PUBLIC_IP`, we will need it in our next step! 
+
+<figure markdown="span">
+    <img alt="Talos Network Topology" src="../../images/INF-50_Talos_network_topo.png" />
+    <figcaption>our network topology: the private telos-net network connected to the external world through a router</figcaption>
+</figure>
+
+
+
 
 ## 2. Generate Talos Config Files
 

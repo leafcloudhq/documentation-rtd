@@ -84,7 +84,7 @@ We will be running three control plane nodes for high availability. To bootstrap
 for i in 1 2 3; do
   openstack server create control-plane-$i \
     --flavor ec1.small \
-    --image talos-1.8.1 \
+    --image Talos-1.8 \
     --nic net-id=$(openstack network show talos-network -f value -c id) \
     --security-group talos-sg \
     --user-data controlplane.yaml
@@ -120,7 +120,7 @@ So far we only have a control plane.  We need a worker node to run pods on:
 ```sh
 openstack server create worker-1 \
   --flavor ec1.xsmall \
-  --image talos-1.8.1 \
+  --image Talos-1.8 \
   --nic net-id=$(openstack network show talos-network -f value -c id) \
   --security-group talos-sg \
   --user-data worker.yaml

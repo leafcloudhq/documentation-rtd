@@ -40,7 +40,6 @@ provider "openstack" {
   auth_url    = "https://create.leaf.cloud:5000"
   region      = "europe-nl"
   use_octavia = true # support octavia loadbalancer
-  tenant_name = "cool-site-project-name"
   tenant_id   = "project ID: see create.leaf.cloud/project/api_access -> view credentials"
 }
 

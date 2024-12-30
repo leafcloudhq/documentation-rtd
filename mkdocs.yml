@@ -30,6 +30,7 @@ nav:
   - Orchestration:
       - Terraform:
           - Creating instances: terraform/creating-instances.md
+          - Hosting Backend State in Object Store: terraform/tf-state.md
       - Ansible:
           - Creating instances: ansible/creating-instances.md
   - Managed Kubernetes:

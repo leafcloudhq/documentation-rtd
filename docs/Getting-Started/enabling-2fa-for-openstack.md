@@ -6,19 +6,25 @@ This step-by-step guide will show you how to enable 2FA for your OpenStack accou
 
 First, access your user dashboard by navigating to:
 
-[https://users.leaf.cloud](https://users.leaf.cloud)
+[https://my.leaf.cloud](https://my.leaf.cloud)
 
-![](../images/AccountDashboard.png)
+![User Dashboard](../images/newdashboard.jpg)
+
+---
 
 ## Step 2: Enable 2FA in Your Account Settings
 
-- Within your account settings, locate and check the box labeled **"Enable 2FA"** to begin the setup process.
+- Go to the Settings page. Locate the checkbox labeled "2FA Status" and check it to enable two-factor authentication.
+- Click Save to apply the settings.
+
+---
 
 ## Step 3: Access Your OpenStack Dashboard
 
 Proceed to your OpenStack dashboard by visiting:
 
 [https://create.leaf.cloud](https://create.leaf.cloud)
+
 
 
 

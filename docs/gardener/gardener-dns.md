@@ -56,12 +56,16 @@ spec:
 ```
 
 ## Explanation of Key Fields
-dns.gardener.cloud/dnsnames: Defines the DNS name that will be created within the Gardener-managed DNS zone.
-dns.gardener.cloud/ttl: Sets the Time-to-Live (TTL) value for the DNS entry (600 seconds in this example).
-dns.gardener.cloud/class: Specifies the DNS management class as garden.
-cert-manager.io/cluster-issuer: Uses Let's Encrypt for automatic TLS certificate provisioning.
-rules.host: Defines the hostname for the Ingress resource.
-tls: Configures TLS for secure HTTPS access, with a corresponding secretName for the certificate.
+
+| Field                                      | Description |
+|--------------------------------------------|-------------|
+| `dns.gardener.cloud/dnsnames`             | Defines the DNS name that will be created within the Gardener-managed DNS zone. |
+| `dns.gardener.cloud/ttl`                   | Sets the Time-to-Live (TTL) value for the DNS entry (e.g., `600` seconds). |
+| `dns.gardener.cloud/class`                 | Specifies the DNS management class as `garden`. |
+| `cert-manager.io/cluster-issuer`           | Uses Let's Encrypt for automatic TLS certificate provisioning. |
+| `rules.host`                               | Defines the hostname for the Ingress resource. |
+| `tls`                                      | Configures TLS for secure HTTPS access, with a corresponding `secretName` for the certificate. |
+
 
 
 

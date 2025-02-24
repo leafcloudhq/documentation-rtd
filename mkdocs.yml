@@ -38,7 +38,7 @@ nav:
       - Temporary kubeconfig: gardener/temporary-kubeconfig.md
       - Advanced network options: gardener/advanced-networking.md
       - WebAssembly in kubernetes: gardener/serverless-webassembly.md
-      - Gardener dns: gardener/gardener-dns.md
+      - Gardener DNS: gardener/gardener-dns.md
   - Billing and cost:
       - Managing your cloud costs: billing-and-cost/managing-cost.md
   - Kubernetes:

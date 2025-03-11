@@ -14,7 +14,7 @@ This guide provides a short tutorial on how to install NVIDIA drivers and CUDA o
 
 1.  **Update and Upgrade Package Lists:**
 
-    ```bash
+    ``` shell
     sudo apt update && sudo apt upgrade -y
     ```
 
@@ -22,13 +22,13 @@ This guide provides a short tutorial on how to install NVIDIA drivers and CUDA o
 
     The `ubuntu-drivers` command is part of the `ubuntu-drivers-common` package. If you encounter the "command not found" error, install it:
 
-    ```bash
+    ``` shell
     sudo apt install ubuntu-drivers-common
     ```
 
 3.  **Identify Your NVIDIA Card and Recommended Driver:**
 
-    ```bash
+    ``` shell
     ubuntu-drivers devices
     ```
 
@@ -38,13 +38,13 @@ This guide provides a short tutorial on how to install NVIDIA drivers and CUDA o
 
     * **Install the recommended driver:**
 
-        ```bash
+        ``` shell
         sudo ubuntu-drivers autoinstall
         ```
 
     * **Install a specific driver version:**
 
-        ```bash
+        ``` shell
         sudo apt install nvidia-driver-XXX
         ```
 
@@ -52,13 +52,13 @@ This guide provides a short tutorial on how to install NVIDIA drivers and CUDA o
 
 5.  **Reboot Your System:**
 
-    ```bash
+    ``` shell
     sudo reboot
     ```
 
 6.  **Verify the Installation:**
 
-    ```bash
+    ``` shell
     nvidia-smi
     ```
 
@@ -68,26 +68,27 @@ This section details installing CUDA version 12.8.0 using the local `.deb` repos
 
 1.  **Download CUDA Repository Pin and Local Installer:**
 
-    ```bash
-    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-ubuntu2404.pinsudo mv cuda-ubuntu2404.pin /etc/apt/preferences.d/cuda-repository-pin-600
+    ``` shell
+    wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/cuda-ubuntu2404.pinsudo 
+    mv cuda-ubuntu2404.pin /etc/apt/preferences.d/cuda-repository-pin-600
     wget https://developer.download.nvidia.com/compute/cuda/12.8.0/local_installers/cuda-repo-ubuntu2404-12-8-local_12.8.0-570.86.10-1_amd64.deb
     ```
 
 2.  **Install the CUDA Repository:**
 
-    ```bash
+    ``` shell
     sudo dpkg -i cuda-repo-ubuntu2404-12-8-local_12.8.0-570.86.10-1_amd64.deb
     ```
 
 3.  **Add CUDA Repository Key:**
 
-    ```bash
+    ``` shell
     sudo cp /var/cuda-repo-ubuntu2404-12-8-local/cuda-*-keyring.gpg /usr/share/keyrings/
     ```
 
 4.  **Update Package Lists and Install CUDA Toolkit:**
 
-    ```bash
+    ``` shell
     sudo apt-get update
     sudo apt-get -y install cuda-toolkit-12-8
     ```
@@ -96,20 +97,20 @@ This section details installing CUDA version 12.8.0 using the local `.deb` repos
 
     * Add the CUDA bin and lib directories to your `PATH` and `LD_LIBRARY_PATH` environment variables. Open your `~/.bashrc` file with a text editor:
 
-        ```bash
+        ``` shell
         nano ~/.bashrc
         ```
 
     * Add the following lines to the end of the file:
 
-        ```bash
+        ``` shell
         export PATH=/usr/local/cuda-12.8/bin${PATH:+:${PATH}}
         export LD_LIBRARY_PATH=/usr/local/cuda-12.8/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
         ```
 
     * Save the file and apply the changes:
 
-        ```bash
+        ``` shell
         source ~/.bashrc
         ```
 
@@ -117,6 +118,6 @@ This section details installing CUDA version 12.8.0 using the local `.deb` repos
 
     * Check the CUDA version:
 
-        ```bash
+        ``` shell
         nvcc --version
         ```

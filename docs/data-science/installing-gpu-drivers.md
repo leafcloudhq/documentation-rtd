@@ -4,10 +4,9 @@ This guide provides a short tutorial on how to install NVIDIA drivers and CUDA o
 
 ## Prerequisites
 
-* A system with an NVIDIA graphics card.
+* An Ubuntu 24.04 system with an NVIDIA graphics card.
 * An active internet connection.
 * Basic familiarity with the Linux command line.
-* Compatible NVIDIA driver already installed.
 
 ## Steps
 

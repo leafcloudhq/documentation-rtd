@@ -59,6 +59,7 @@ nav:
   - Large Language Models (LLMs):
       - setup private llm on k8s: private-llm/setup-private-llm.md
   - Data Science:
+      - Installing GPU drivers: data-science/installing-gpu-drivers.md
       - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
       - Setting up TensorFlow GPU: data-science/using-a-gpu.md
       - Setting up Jupyter: data-science/running-jupyter.md

@@ -20,7 +20,7 @@ In this case you can unmount and detach the volume before resizing. The followin
     Login to the server and find which disk is the one in question `df -h`. It will probably be called something like /dev/vdb
     
     ```
-    unmount /dev/<drive>
+    umount /dev/<drive>
     ```
 
 2. Identify which is the correct volume to detach.
@@ -58,32 +58,35 @@ In this case you can unmount and detach the volume before resizing. The followin
     openstack server add volume <server> <volume>
     ```
 
-6. Resize the volume from within the server
-    Now you should be able to see the disk again from the shell in your server.
+6. Resize the volume from within the server  
+    Now you should be able to see the disk again from the shell in your server.  
 
-    ```
+    ```bash
     lsblk
     ```
 
-    Depending on the filesystem you have used the command will be different. For ext3, the command is: 
-    
-    ```
-    # not specifying any parameters typically will grow to the maximum size.
+    Depending on the filesystem you have used, the command will be different.  
+
+    For **ext3** (not specifying any parameters will typically grow it to the maximum size):  
+    ```bash
     resize2fs /dev/<disk>
     ```
+
 
 7. Re-mount the disk on a location of your choice
     As a last step you need to re-mount you disk
     
+    **If it was attached before** 
     ```
-    # if it was attached before (your drive was still configured in /etc/fstab):
     mount --all
+     ```
 
-    # otherwise mount it to a new location (this will not persist across reboots)
+    **otherwise mount it to a new location (this will not persist across reboots)**
+    ```
     mount /dev/<disk_number> /mnt/<disk_number>
     ```
 
-You have now successfully expanded a volume.
+    You have now successfully expanded a volume.
 
 
 ## If the volume is your bootdisk

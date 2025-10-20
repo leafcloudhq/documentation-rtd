@@ -144,6 +144,30 @@ body {
 }
 
 /* --------------------------------------------
+   TABS NAVIGATION (Top-level menu bar)
+   -------------------------------------------- */
+.md-tabs {
+  background: linear-gradient(135deg, #4051b5 0%, #5663d6 50%, #6573e0 100%);
+  background-color: #5361c8;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.md-tabs__link {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+.md-tabs__link:hover {
+  color: var(--leafcloud-green);
+  opacity: 1;
+}
+
+.md-tabs__link--active {
+  color: var(--leafcloud-white);
+  opacity: 1;
+}
+
+/* --------------------------------------------
    NAVIGATION SIDEBAR
    -------------------------------------------- */
 .md-nav {
@@ -197,6 +221,94 @@ body {
 
 .md-nav__item--nested > .md-nav__link:hover {
   color: var(--leafcloud-green);
+}
+
+/* --------------------------------------------
+   SECTION HEADERS (Secondary Menu Items)
+   Clean alignment without excessive borders
+   -------------------------------------------- */
+
+/* Top-level section links (e.g., ORCHESTRATION, OPENSTACK) */
+.md-nav__item--section > .md-nav__link {
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--leafcloud-black);
+  padding: 0.6rem 0.75rem;
+  margin: 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.md-nav__item--section > .md-nav__link:hover {
+  color: var(--leafcloud-green);
+  background-color: rgba(0, 224, 143, 0.08);
+}
+
+/* Subsection headers (non-clickable labels like Terraform, Ansible) */
+.md-nav__item--section .md-nav__item--section > label.md-nav__link {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--leafcloud-black);
+  padding: 0.5rem 0.75rem;
+  padding-right: 2rem;
+  margin: 0.15rem 0;
+  text-transform: none;
+  position: relative;
+  cursor: pointer;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.md-nav__item--section .md-nav__item--section > label.md-nav__link:hover {
+  color: var(--leafcloud-green);
+}
+
+/* Arrow for collapsible subsections */
+.md-nav__item--section .md-nav__item--section > label.md-nav__link::after {
+  content: "";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 2px solid var(--leafcloud-gray);
+  border-bottom: 2px solid var(--leafcloud-gray);
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.25s ease;
+}
+
+.md-nav__item--section .md-nav__item--section > input:checked ~ label.md-nav__link::after {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Regular navigation items (pages) */
+.md-nav__item--section .md-nav .md-nav__link {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.725rem;
+  color: var(--leafcloud-gray);
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.md-nav__item--section .md-nav .md-nav__link:hover {
+  color: var(--leafcloud-green);
+}
+
+/* Active link styling */
+.md-nav__link--active {
+  color: var(--leafcloud-green) !important;
+  font-weight: 600;
+}
+
+/* Clean spacing between items */
+.md-nav__item {
+  margin: 0.1rem 0;
+}
+
+.md-nav__item--section {
+  margin: 0.5rem 0;
 }
 
 /* --------------------------------------------

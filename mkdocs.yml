@@ -14,66 +14,79 @@ nav:
   - Home: index.md
   - Getting Started:
       - Changing your Password: Getting-Started/Changing-your-password.md
-      - Enable 2fa: Getting-Started/enabling-2fa-for-openstack.md
-      - Launching an Instance: Getting-Started/Launching-an-instance.md
-      - Connecting to your instance: Getting-Started/Log-in-to-your-instance.md
-      - Configuring Security groups: Getting-Started/Configuring-security-groups.md
-      - Key Pairs: Getting-Started/Key-pairs.md
-      - Using the Openstack CLI: Getting-Started/Using-Openstack-CLI.md
-      - Create a subdomain: Getting-Started/Creating-subdomain.md
-  - Volumes:
-      - Creating a Volume: volumes/Creating-a-new-volume.md
-      - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
-      - Creating a Volume Backup: volumes/Creating-a-volume-backup.md
-      - Live Volume extension: volumes/Live-volume-extension.md
-      - Resizing (extending) a Volume: volumes/Resizing-a-volume.md
-      - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
-  - Object Storage:
-      - Using Object Storage (S3): object-storage/using-object-storage.md
-  - Network:
-      - Creating a Network: network/Creating-a-new-network.md
-      - Creating a Router: network/Creating-a-new-router.md
-      - Floating IP: network/Floating-IP.md
-      - Creating a Load Balancer: network/Creating-a-load-balancer.md
-      - Creating a Load Balancer with offload SSL-Certificate: network/Creating-a-load-balancer-with-offload-SSL-Certificate.md
-      - Creating a site to site VPN: network/Setup-site-to-site-vpn.md
-      - Add an interface to an instance: network/Add-an-interface-to-an-existing-instance.md
+      - Enable 2FA: Getting-Started/enabling-2fa-for-openstack.md
+  - OpenStack:
+      - Overview: openstack/index.md
+      - Compute:
+          - Launching an Instance: Getting-Started/Launching-an-instance.md
+          - Connecting to your Instance: Getting-Started/Log-in-to-your-instance.md
+          - Key Pairs: Getting-Started/Key-pairs.md
+          - Security Groups: Getting-Started/Configuring-security-groups.md
+      - Volumes:
+          - Creating a Volume: volumes/Creating-a-new-volume.md
+          - Attaching a Volume: volumes/Attaching-a-volume-to-your-instance.md
+          - Creating a Volume Backup: volumes/Creating-a-volume-backup.md
+          - Live Volume Extension: volumes/Live-volume-extension.md
+          - Resizing a Volume: volumes/Resizing-a-volume.md
+          - Making a Volume Snapshot: volumes/Make-a-volume-snapshot.md
+      - Object Storage:
+          - Using Object Storage (S3): object-storage/using-object-storage.md
+      - Network:
+          - Creating a Network: network/Creating-a-new-network.md
+          - Creating a Router: network/Creating-a-new-router.md
+          - Floating IP: network/Floating-IP.md
+          - Creating a Load Balancer: network/Creating-a-load-balancer.md
+          - Load Balancer with SSL Certificate: network/Creating-a-load-balancer-with-offload-SSL-Certificate.md
+          - Site-to-Site VPN: network/Setup-site-to-site-vpn.md
+          - Add Interface to Instance: network/Add-an-interface-to-an-existing-instance.md
+      - DNS:
+          - Creating a Subdomain: Getting-Started/Creating-subdomain.md
+      - Tools:
+          - Using the OpenStack CLI: Getting-Started/Using-Openstack-CLI.md
+  - Kubernetes:
+      - Overview: kubernetes/index.md
+      - Managed Kubernetes (Gardener):
+          - Creating a Cluster: gardener/creating-a-kubernetes-cluster.md
+          - Installing gardenctl: gardener/gardenctl.md
+          - Temporary Kubeconfig: gardener/temporary-kubeconfig.md
+          - Advanced Networking: gardener/advanced-networking.md
+          - Gardener DNS: gardener/gardener-dns.md
+          - WebAssembly: gardener/serverless-webassembly.md
+          - Installing Helm: kubernetes/installing-helm.md
+          - NGINX Ingress with Let's Encrypt: kubernetes/ingress-with-nginx-letsencrypt.md
+          - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
+          - PostgreSQL Backups: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
+          - Creating a FerretDB Database: kubernetes/creating-a-ferretdb-database.md
+      - Unmanaged Kubernetes:
+          - Talos:
+              - Creating a Talos Cluster: talos/creating-talos-cluster.md
+  - Billing and Cost:
+      - Managing Cloud Costs: billing-and-cost/managing-cost.md
   - Orchestration:
+      - Overview: orchestration/index.md
       - Terraform:
-          - Creating instances: terraform/creating-instances.md
+          - Creating Instances: terraform/creating-instances.md
           - Hosting Backend State in Object Store: terraform/tf-state.md
       - Ansible:
-          - Creating instances: ansible/creating-instances.md
-  - Billing and cost:
-      - Managing your cloud costs: billing-and-cost/managing-cost.md
-  - Kubernetes:
-      - Creating a Kubernetes Cluster: gardener/creating-a-kubernetes-cluster.md
-      - Installing and using gardenctl: gardener/gardenctl.md
-      - Temporary kubeconfig: gardener/temporary-kubeconfig.md
-      - Advanced network options: gardener/advanced-networking.md
-      - WebAssembly in kubernetes: gardener/serverless-webassembly.md
-      - Gardener DNS: gardener/gardener-dns.md
-      - Installing Helm: kubernetes/installing-helm.md
-      - Adding NGINX Ingress With Letsencrypt: kubernetes/ingress-with-nginx-letsencrypt.md
-      - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
-      - Scheduling backups of a PostgreSQL database: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
-      - Implementing Logrotate: kubernetes/implementing-logrotate.md
-      - Creating and resizing node groups: kubernetes/creating-and-resizing-node-groups.md
-      - Creating a FerretDB database: kubernetes/creating-a-ferretdb-database.md
-  - Talos:
-      - Create Talos Kubernetes Cluster: talos/creating-talos-cluster.md
-  - Claris Filemaker:
-      - Deploying Claris Filemaker on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md
-  - Nextcloud:
-      - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md
-  - Large Language Models (LLMs):
-      - setup private llm on k8s: private-llm/setup-private-llm.md
-  - Data Science:
-      - Installing GPU drivers: data-science/installing-gpu-drivers.md
-      - All-in-one Jupyter image: data-science/using-the-jupyter-image.md
-      - Setting up TensorFlow GPU: data-science/using-a-gpu.md
-      - Setting up Jupyter: data-science/running-jupyter.md
-      - Setting up Jupyterlab with Miniconda: data-science/running-jupyterlab-with-miniconda.md
+          - Creating Instances: ansible/creating-instances.md
+  - Applications:
+      - Nextcloud:
+          - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md
+          - Implementing S3 as Primary Storage: Nextcloud/implementing-s3-as-primary-storage.md
+      - Claris Filemaker:
+          - Deploying on Ubuntu: Claris Filemaker/deploying-claris-filemaker-on-ubuntu.md
+      - WordPress:
+          - Deploying WordPress: wordpress/wordpress-tutorial.md
+  - AI/ML & Data Science:
+      - Private LLM:
+          - Setup Private LLM on Kubernetes: private-llm/setup-private-llm.md
+      - GPU Computing:
+          - Installing GPU Drivers: data-science/installing-gpu-drivers.md
+          - Using a GPU: data-science/using-a-gpu.md
+      - Jupyter:
+          - All-in-one Jupyter Image: data-science/using-the-jupyter-image.md
+          - Setting up Jupyter: data-science/running-jupyter.md
+          - JupyterLab with Miniconda: data-science/running-jupyterlab-with-miniconda.md
 
 theme:
   name: material
@@ -106,7 +119,7 @@ theme:
     - navigation.tabs           # Top-level tabs
     - navigation.tabs.sticky    # Sticky tabs
     - navigation.sections       # Section index pages
-    - navigation.expand         # Expand navigation by default
+    # - navigation.expand         # Expand navigation by default (disabled for collapsible sections)
     - navigation.path           # Show navigation path
     - navigation.indexes        # Attach pages to sections
     - navigation.top            # Back to top button

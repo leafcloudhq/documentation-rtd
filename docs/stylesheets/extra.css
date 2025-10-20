@@ -1,38 +1,861 @@
+/* ============================================
+   LEAFCLOUD DOCUMENTATION - CUSTOM STYLES
+   Matching leaf.cloud brand identity
+   ============================================ */
+
+/* --------------------------------------------
+   FONTS
+   -------------------------------------------- */
 @font-face {
-    font-family: "Euclid";
-    src: url("../assets/fonts/EuclidCircularB-Light-WebS.woff") format("woff2"),
-         url("../assets/fonts/EuclidCircularB-Light-WebS.woff") format("woff");
-  }
-  
-
-  :root {
-    --md-text-font: "Euclid"; 
-  }
-
-  :root > * {
-    --md-accent-fg-color:        rgb(94, 94, 94);
-    --md-accent-fg-color--dark:  #4A4A4A;
-    --md-primary-fg-color:        #D2EAF3;
-    --md-primary-fg-color--light: #fffff2;
-    --md-primary-fg-color--dark:  #fffff2;
-    --md-footer-bg-color: #CAFFCF;
-    --md-footer-fg-color: #363636;
-    --md-default-bg-color: #fffff2;
-    --md-typeset-a-color: #3FA9F5;
-    --md-primary-bg-color: #363636;
-    --md-default-fg-color--light: #333;
-
-  }
-
-.md-footer__title {
-    font-weight: bold;
+  font-family: "Season";
+  src: url("../assets/fonts/SeasonVFTRIALVF.woff2") format("woff2");
+  font-weight: 550;
+  font-style: normal;
+  font-display: swap;
 }
 
-  .md-footer-meta__inner {
+/* --------------------------------------------
+   ROOT VARIABLES - BRAND COLORS
+   -------------------------------------------- */
+:root {
+  /* Brand Colors from leaf.cloud */
+  --leafcloud-green: #00E08F;
+  --leafcloud-blue: #0077FF;
+  --leafcloud-black: #121926;
+  --leafcloud-white: #ffffff;
+  --leafcloud-gray: #444;
+  --leafcloud-gray-white: #F5F5F5;
+  --leafcloud-gray-light: #e0e0e0;
+  
+  /* Typography */
+  --md-text-font: "Season", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --md-code-font: "Roboto Mono", Monaco, Courier, monospace;
+  
+  /* Primary Theme Colors */
+  --md-primary-fg-color: var(--leafcloud-black);
+  --md-primary-fg-color--light: #2c3442;
+  --md-primary-fg-color--dark: #0a0e14;
+  --md-primary-bg-color: var(--leafcloud-white);
+  
+  /* Accent Colors */
+  --md-accent-fg-color: var(--leafcloud-green);
+  --md-accent-fg-color--transparent: rgba(0, 224, 143, 0.1);
+  --md-accent-bg-color: var(--leafcloud-green);
+  
+  /* Background Colors */
+  --md-default-bg-color: var(--leafcloud-white);
+  --md-default-fg-color: var(--leafcloud-black);
+  --md-default-fg-color--light: var(--leafcloud-gray);
+  --md-default-fg-color--lighter: #757575;
+  --md-default-fg-color--lightest: #bbb;
+  
+  /* Code Block Colors */
+  --md-code-bg-color: #f8f9fa;
+  --md-code-fg-color: var(--leafcloud-black);
+  --md-code-hl-color: rgba(0, 224, 143, 0.15);
+  
+  /* Links */
+  --md-typeset-a-color: var(--leafcloud-green);
+  
+  /* Footer */
+  --md-footer-bg-color: var(--leafcloud-black);
+  --md-footer-bg-color--dark: #0a0e14;
+  --md-footer-fg-color: var(--leafcloud-white);
+  --md-footer-fg-color--light: var(--leafcloud-gray-white);
+  --md-footer-fg-color--lighter: #999;
+  
+  /* Typography Settings */
+  --md-typeset-color: var(--leafcloud-black);
+  
+  /* Shadows */
+  --md-shadow-z1: 0 2px 4px rgba(0,0,0,0.05);
+  --md-shadow-z2: 0 4px 8px rgba(0,0,0,0.1);
+  --md-shadow-z3: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* --------------------------------------------
+   GLOBAL SETTINGS
+   -------------------------------------------- */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--md-text-font);
+  color: var(--leafcloud-gray);
+}
+
+/* --------------------------------------------
+   HEADER / NAVIGATION BAR
+   -------------------------------------------- */
+.md-header {
+  background-color: var(--leafcloud-black);
+  color: var(--leafcloud-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.md-header__button {
+  color: var(--leafcloud-white);
+}
+
+.md-header__button:hover {
+  opacity: 0.8;
+}
+
+.md-header__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--leafcloud-white);
+}
+
+/* Logo Styling */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1); /* Make logo white */
+}
+
+/* Search Bar in Header */
+.md-search__input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--leafcloud-white);
+  border-radius: 4px;
+}
+
+.md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.md-search__input:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.md-search__input:focus {
+  background-color: var(--leafcloud-white);
+  color: var(--leafcloud-black);
+  border-color: var(--leafcloud-green);
+}
+
+.md-search__icon {
+  color: var(--leafcloud-white);
+}
+
+/* --------------------------------------------
+   NAVIGATION SIDEBAR
+   -------------------------------------------- */
+.md-nav {
+  font-size: 0.75rem;
+}
+
+/* Navigation Links */
+.md-nav__link {
+  color: var(--leafcloud-black);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.md-nav__link:hover {
+  background-color: rgba(0, 224, 143, 0.08);
+  color: var(--leafcloud-green);
+}
+
+.md-nav__link:focus {
+  background-color: rgba(0, 224, 143, 0.1);
+  outline: 2px solid var(--leafcloud-green);
+  outline-offset: 2px;
+}
+
+/* Active Navigation Item */
+.md-nav__link--active {
+  color: var(--leafcloud-green);
+  font-weight: 600;
+  background-color: rgba(0, 224, 143, 0.08);
+}
+
+.md-nav__item .md-nav__link--active {
+  border-left: 3px solid var(--leafcloud-green);
+}
+
+/* Navigation Titles */
+.md-nav__title {
+  font-weight: 600;
+  color: var(--leafcloud-black);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Expandable Navigation */
+.md-nav__item--nested > .md-nav__link {
+  color: var(--leafcloud-black);
+  font-weight: 500;
+}
+
+.md-nav__item--nested > .md-nav__link:hover {
+  color: var(--leafcloud-green);
+}
+
+/* --------------------------------------------
+   TABLE OF CONTENTS
+   -------------------------------------------- */
+.md-sidebar--secondary {
+  border-left: 1px solid var(--leafcloud-gray-light);
+}
+
+.md-nav--secondary .md-nav__title {
+  font-weight: 600;
+  color: var(--leafcloud-black);
+}
+
+.md-nav--secondary .md-nav__link {
+  color: var(--leafcloud-gray);
+  font-size: 0.6875rem;
+}
+
+.md-nav--secondary .md-nav__link--active {
+  color: var(--leafcloud-green);
+  font-weight: 600;
+  border-left: 2px solid var(--leafcloud-green);
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  color: var(--leafcloud-green);
+}
+
+/* --------------------------------------------
+   MAIN CONTENT AREA
+   -------------------------------------------- */
+.md-content {
+  padding: 0;
+}
+
+.md-content__inner {
+  padding: 2rem 2.5rem;
+}
+
+article.md-content__inner {
+  max-width: 100%;
+}
+
+/* Typography */
+.md-typeset {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--leafcloud-gray);
+}
+
+/* Headings */
+.md-typeset h1 {
+  color: var(--leafcloud-black);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-variation-settings: 'wght' 700, 'SERF' 20;
+  line-height: 1.2;
+}
+
+.md-typeset h2 {
+  color: var(--leafcloud-black);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  font-variation-settings: 'wght' 700, 'SERF' 15;
+  border-bottom: 2px solid var(--leafcloud-gray-light);
+  padding-bottom: 0.4rem;
+}
+
+.md-typeset h3 {
+  color: var(--leafcloud-black);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.625rem;
+  font-variation-settings: 'wght' 600, 'SERF' 10;
+}
+
+.md-typeset h4 {
+  color: var(--leafcloud-black);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset h5 {
+  color: var(--leafcloud-black);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.md-typeset h6 {
+  color: var(--leafcloud-gray);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.md-typeset p {
+  margin-bottom: 1rem;
+}
+
+/* Links */
+.md-typeset a {
+  color: var(--leafcloud-green);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--leafcloud-blue);
+  border-bottom-color: var(--leafcloud-blue);
+}
+
+.md-typeset a:focus {
+  outline: 2px solid var(--leafcloud-green);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Lists */
+.md-typeset ul,
+.md-typeset ol {
+  margin-bottom: 1rem;
+}
+
+.md-typeset li {
+  margin-bottom: 0.5rem;
+}
+
+/* Strong and Emphasis */
+.md-typeset strong {
+  color: var(--leafcloud-black);
+  font-weight: 600;
+}
+
+.md-typeset em {
+  font-style: italic;
+}
+
+/* --------------------------------------------
+   CODE BLOCKS
+   -------------------------------------------- */
+.md-typeset code {
+  background-color: var(--md-code-bg-color);
+  color: var(--leafcloud-black);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  border: 1px solid var(--leafcloud-gray-light);
+}
+
+.md-typeset pre {
+  background-color: var(--md-code-bg-color);
+  border: 1px solid var(--leafcloud-gray-light);
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+  box-shadow: var(--md-shadow-z1);
+}
+
+.md-typeset pre > code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: var(--leafcloud-black);
+}
+
+/* Code Block Headers */
+.md-typeset .highlight::before {
+  background-color: var(--leafcloud-green);
+  color: var(--leafcloud-black);
+  font-weight: 600;
+}
+
+/* Copy Button */
+.md-clipboard {
+  color: var(--leafcloud-gray);
+}
+
+.md-clipboard:hover {
+  color: var(--leafcloud-green);
+}
+
+/* --------------------------------------------
+   ADMONITIONS / CALLOUTS
+   -------------------------------------------- */
+.md-typeset .admonition {
+  border-radius: 6px;
+  border-left: 4px solid;
+  box-shadow: var(--md-shadow-z1);
+  margin: 1.5rem 0;
+}
+
+/* Note */
+.md-typeset .admonition.note {
+  border-left-color: var(--leafcloud-blue);
+}
+
+.md-typeset .admonition.note > .admonition-title {
+  background-color: rgba(0, 119, 255, 0.1);
+  color: var(--leafcloud-blue);
+}
+
+/* Tip / Success */
+.md-typeset .admonition.tip,
+.md-typeset .admonition.success {
+  border-left-color: var(--leafcloud-green);
+}
+
+.md-typeset .admonition.tip > .admonition-title,
+.md-typeset .admonition.success > .admonition-title {
+  background-color: rgba(0, 224, 143, 0.1);
+  color: var(--leafcloud-green);
+}
+
+/* Warning */
+.md-typeset .admonition.warning {
+  border-left-color: #ff9800;
+}
+
+.md-typeset .admonition.warning > .admonition-title {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+
+/* Danger / Error */
+.md-typeset .admonition.danger,
+.md-typeset .admonition.error {
+  border-left-color: #f44336;
+}
+
+.md-typeset .admonition.danger > .admonition-title,
+.md-typeset .admonition.error > .admonition-title {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+/* Admonition Title */
+.md-typeset .admonition-title {
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  margin: 0;
+}
+
+/* --------------------------------------------
+   TABLES
+   -------------------------------------------- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--leafcloud-gray-light);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--md-shadow-z1);
+}
+
+.md-typeset table:not([class]) thead {
+  background-color: var(--leafcloud-gray-white);
+}
+
+.md-typeset table:not([class]) thead th {
+  color: var(--leafcloud-black);
+  font-weight: 600;
+  border-bottom: 2px solid var(--leafcloud-green);
+  padding: 0.875rem 1rem;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: rgba(0, 224, 143, 0.05);
+}
+
+.md-typeset table:not([class]) td {
+  border-bottom: 1px solid var(--leafcloud-gray-light);
+  padding: 0.75rem 1rem;
+}
+
+/* --------------------------------------------
+   BUTTONS & NAVIGATION
+   -------------------------------------------- */
+.md-typeset .md-button {
+  background-color: var(--leafcloud-green);
+  color: var(--leafcloud-black);
+  border: none;
+  border-radius: 6px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  text-transform: none;
+  box-shadow: var(--md-shadow-z1);
+}
+
+.md-typeset .md-button:hover {
+  background-color: #00c77d;
+  box-shadow: var(--md-shadow-z2);
+  transform: translateY(-1px);
+}
+
+.md-typeset .md-button:focus {
+  outline: 2px solid var(--leafcloud-green);
+  outline-offset: 2px;
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--leafcloud-green);
+  color: var(--leafcloud-black);
+}
+
+/* Previous / Next Navigation */
+.md-footer__link {
+  padding: 1rem 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.md-footer__link:hover {
+  background-color: rgba(0, 224, 143, 0.1);
+}
+
+.md-footer__link:focus {
+  outline: 2px solid var(--leafcloud-green);
+  outline-offset: 2px;
+}
+
+.md-footer__title {
+  font-weight: 600;
+  color: var(--leafcloud-white);
+}
+
+.md-footer__direction {
+  color: var(--leafcloud-gray-white);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------
+   FOOTER
+   -------------------------------------------- */
+.md-footer {
+  background-color: var(--leafcloud-black);
+  color: var(--leafcloud-white);
+}
+
+.md-footer-meta {
+  background-color: var(--md-footer-bg-color--dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.md-footer-meta__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  color: var(--leafcloud-gray-white);
+}
+
+.md-footer-copyright {
+  color: var(--leafcloud-gray-white);
+  font-size: 0.875rem;
+}
+
+.md-footer-copyright a {
+  color: var(--leafcloud-green);
+  text-decoration: none;
+}
+
+.md-footer-copyright a:hover {
+  color: var(--leafcloud-white);
+  text-decoration: underline;
+}
+
+/* Social Links in Footer */
+.md-footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.md-footer-social a {
+  color: var(--leafcloud-gray-white);
+  transition: color 0.2s ease;
+}
+
+.md-footer-social a:hover {
+  color: var(--leafcloud-green);
+}
+
+/* --------------------------------------------
+   IMAGES & MEDIA
+   -------------------------------------------- */
+.md-typeset img {
+  border-radius: 6px;
+  box-shadow: var(--md-shadow-z1);
+  max-width: 100%;
+  height: auto;
+}
+
+.md-typeset figure {
+  margin: 2rem 0;
+}
+
+.md-typeset figcaption {
+  color: var(--leafcloud-gray);
+  font-size: 0.875rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------
+   SEARCH
+   -------------------------------------------- */
+.md-search-result__item {
+  border-bottom: 1px solid var(--leafcloud-gray-light);
+}
+
+.md-search-result__item:hover {
+  background-color: rgba(0, 224, 143, 0.05);
+}
+
+.md-search-result__link {
+  padding: 1rem;
+}
+
+.md-search-result__link:hover {
+  background-color: rgba(0, 224, 143, 0.08);
+}
+
+.md-search-result__link:focus {
+  outline: 2px solid var(--leafcloud-green);
+  outline-offset: -2px;
+}
+
+.md-search-result__title {
+  color: var(--leafcloud-black);
+  font-weight: 600;
+}
+
+.md-search-result__teaser {
+  color: var(--leafcloud-gray);
+}
+
+.md-search-result mark {
+  background-color: rgba(0, 224, 143, 0.3);
+  color: var(--leafcloud-black);
+  border-radius: 2px;
+  padding: 0 0.2em;
+}
+
+/* --------------------------------------------
+   SCROLLBAR STYLING
+   -------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--leafcloud-gray-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--leafcloud-gray);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--leafcloud-green);
+}
+
+/* --------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------- */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--leafcloud-black);
+    color: var(--leafcloud-white);
+  }
+  
+  .md-nav--primary .md-nav__title .md-nav__button {
+    color: var(--leafcloud-white);
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .md-content__inner {
+    padding: 1.5rem 1rem;
+  }
+  
+  .md-typeset {
+    font-size: 0.75rem;
+  }
+  
+  .md-typeset h1 {
+    font-size: 1.375rem;
+  }
+  
+  .md-typeset h2 {
+    font-size: 1.125rem;
+  }
+  
+  .md-typeset h3 {
+    font-size: 1rem;
+  }
+}
+
+/* --------------------------------------------
+   UTILITIES & HELPERS
+   -------------------------------------------- */
+.text-green {
+  color: var(--leafcloud-green);
+}
+
+.text-blue {
+  color: var(--leafcloud-blue);
+}
+
+.bg-green {
+  background-color: var(--leafcloud-green);
+}
+
+.bg-gray-light {
+  background-color: var(--leafcloud-gray-white);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--leafcloud-green);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------
+   ANIMATIONS
+   -------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content__inner {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* --------------------------------------------
+   PRINT STYLES
+   -------------------------------------------- */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer {
     display: none;
   }
-
-  .md-header--shadow {
-    box-shadow: none;
-    box-shadow:rgba(94, 94, 94, 0.3) 5px 0 5px
+  
+  .md-content__inner {
+    max-width: 100%;
   }
+}
+
+/* --------------------------------------------
+   CUSTOM ENHANCEMENTS
+   -------------------------------------------- */
+
+/* Highlight Box */
+.highlight-box {
+  background-color: rgba(0, 224, 143, 0.1);
+  border-left: 4px solid var(--leafcloud-green);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+/* Back to Top Button Enhancement */
+.md-top {
+  background-color: var(--leafcloud-green);
+  color: var(--leafcloud-black);
+  box-shadow: var(--md-shadow-z2);
+}
+
+.md-top:hover {
+  background-color: #00c77d;
+  box-shadow: var(--md-shadow-z3);
+}
+
+/* Breadcrumbs (if enabled) */
+.md-breadcrumbs {
+  font-size: 0.875rem;
+  color: var(--leafcloud-gray);
+}
+
+.md-breadcrumbs a {
+  color: var(--leafcloud-green);
+}
+
+.md-breadcrumbs a:hover {
+  color: var(--leafcloud-blue);
+}
+
+/* Tags */
+.md-tag {
+  background-color: rgba(0, 224, 143, 0.1);
+  color: var(--leafcloud-green);
+  border: 1px solid var(--leafcloud-green);
+  border-radius: 12px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Banner/Announcement Bar (if used) */
+.md-banner {
+  background-color: var(--leafcloud-green);
+  color: var(--leafcloud-black);
+}
+
+.md-banner__button {
+  color: var(--leafcloud-black);
+}
+
+/* Version Selector */
+.md-version {
+  color: var(--leafcloud-white);
+}
+
+.md-version__current {
+  color: var(--leafcloud-green);
+}
+
+/* ReadTheDocs Flyout (Override) */
+.rst-versions {
+  background-color: var(--leafcloud-black) !important;
+  border-top: 2px solid var(--leafcloud-green) !important;
+}
+
+.rst-versions .rst-current-version {
+  background-color: var(--leafcloud-black) !important;
+  color: var(--leafcloud-white) !important;
+}
+
+.rst-versions .rst-current-version:hover {
+  background-color: var(--md-primary-fg-color--light) !important;
+}
+
+/* End of Stylesheet */

@@ -15,6 +15,8 @@ With our managed Kubernetes service powered by Gardener, Leafcloud manages the c
 - Simplified cluster lifecycle management
 - Enterprise-grade Kubernetes without the operational overhead
 
+**Pricing:** For hosting the control plane, Leafcloud charges a monthly fee per cluster. Current pricing can be found on our [pricing page](https://leaf.cloud/pricing/).
+
 **Best for:** Teams who want to focus on applications rather than infrastructure management, organizations requiring enterprise SLA, and those seeking hassle-free Kubernetes operations.
 
 ### Unmanaged Kubernetes (Talos, RKE2)

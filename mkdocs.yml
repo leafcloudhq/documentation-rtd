@@ -13,7 +13,7 @@ copyright: Copyright &copy; 2025 Leafcloud - Sustainable Cloud Computing
 nav:
   - Home: index.md
   - Getting Started:
-      - Overview: Getting-Started/index.md
+      - Getting-Started/index.md
       - Launch Your First Instance: Getting-Started/Launching-an-instance.md
       - Enable 2FA & Security: Getting-Started/Changing-your-password.md
       - Invite Team Members: Getting-Started/managing-your-team.md
@@ -21,7 +21,7 @@ nav:
           - Creating DNS Records: Getting-Started/Creating-subdomain.md
           - Using OpenStack CLI: Getting-Started/Using-Openstack-CLI.md
   - OpenStack:
-      - Overview: openstack/index.md
+      - openstack/index.md
       - Compute:
           - Launching an Instance: Getting-Started/Launching-an-instance.md
           - Connecting to your Instance: Getting-Started/Log-in-to-your-instance.md
@@ -49,7 +49,7 @@ nav:
       - Tools:
           - Using the OpenStack CLI: Getting-Started/Using-Openstack-CLI.md
   - Kubernetes:
-      - Overview: kubernetes/index.md
+      - kubernetes/index.md
       - Managed Kubernetes (Gardener):
           - Creating a Cluster: gardener/creating-a-kubernetes-cluster.md
           - Installing gardenctl: gardener/gardenctl.md
@@ -67,16 +67,18 @@ nav:
           - PostgreSQL Backups: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
           - Creating a FerretDB Database: kubernetes/creating-a-ferretdb-database.md
   - Billing and Cost:
+      - billing-and-cost/index.md
       - Managing Your Payment Method: billing-and-cost/payment-methods.md
       - Managing Cloud Costs: billing-and-cost/managing-cost.md
   - Infrastructure as Code:
-      - Overview: orchestration/index.md
+      - orchestration/index.md
       - Terraform:
           - Creating Instances: terraform/creating-instances.md
           - Hosting Backend State in Object Store: terraform/tf-state.md
       - Ansible:
           - Creating Instances: ansible/creating-instances.md
   - Applications:
+      - applications/index.md
       - Nextcloud:
           - Deploying Nextcloud: Nextcloud/deploying-nextcloud.md
           - Implementing S3 as Primary Storage: Nextcloud/implementing-s3-as-primary-storage.md
@@ -85,6 +87,7 @@ nav:
       - WordPress:
           - Deploying WordPress: wordpress/wordpress-tutorial.md
   - AI/ML & Data Science:
+      - data-science/index.md
       - Private LLM:
           - Setup Private LLM on Kubernetes: private-llm/setup-private-llm.md
       - GPU Computing:

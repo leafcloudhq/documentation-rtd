@@ -1,4 +1,4 @@
-# Creating a new volume
+# Creating a Volume
 
 In this tutorial we will create a bootable Volume, using an image as the source
 

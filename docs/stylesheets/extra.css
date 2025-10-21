@@ -314,6 +314,22 @@ body {
 /* --------------------------------------------
    TABLE OF CONTENTS
    -------------------------------------------- */
+   
+/* Hide duplicate page title in integrated TOC */
+.md-nav__link + .md-nav > .md-nav__title:first-child {
+  display: none;
+}
+
+/* Hide the generic label that duplicates the navigation link when TOC is integrated */
+.md-nav__item--active > .md-nav__link--active + .md-nav .md-nav__title[for] {
+  display: none;
+}
+
+/* Hide the anchor link when both label and link exist for active page with TOC */
+.md-nav__item--active > label.md-nav__link--active + a.md-nav__link--active {
+  display: none;
+}
+
 .md-sidebar--secondary {
   border-left: 1px solid var(--leafcloud-gray-light);
 }

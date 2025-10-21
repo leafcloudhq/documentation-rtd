@@ -1,4 +1,4 @@
-# Creating a Subdomain in OpenStack Horizon
+# Creating DNS Records
 
 This tutorial guides you through the process of creating a subdomain under the domain `domains.leaf.cloud` using the OpenStack Horizon interface.
 

@@ -1,4 +1,4 @@
-# How to launch an instance
+# Launching an Instance
 
 In this tutorial we'll work through setting up a Leafcloud instance.
 

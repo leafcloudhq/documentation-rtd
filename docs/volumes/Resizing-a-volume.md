@@ -1,4 +1,4 @@
-# Resizing (extending) a volume
+# Resizing a Volume
 
 **Note: before you start this tutorial, please create a backup of your volume. You can find a tutorial for that [here](https://docs.leaf.cloud/en/latest/volumes/Creating-a-volume-backup/).**
 

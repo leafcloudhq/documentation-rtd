@@ -1,6 +1,4 @@
-# Volume Snapshot
-
-## Making a volume snapshot
+# Making a Volume Snapshot
 
 Navigate to *Project > Volumes*
 

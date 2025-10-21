@@ -13,8 +13,17 @@ copyright: Copyright &copy; 2025 Leafcloud - Sustainable Cloud Computing
 nav:
   - Home: index.md
   - Getting Started:
-      - Changing your Password: Getting-Started/Changing-your-password.md
-      - Enable 2FA: Getting-Started/enabling-2fa-for-openstack.md
+      - Overview: Getting-Started/index.md
+      - Managing Your Team: Getting-Started/managing-your-team.md
+      - Account Security & Authentication: Getting-Started/Changing-your-password.md
+      - Launch Your First Instance:
+          - Launching an Instance: Getting-Started/Launching-an-instance.md
+          - Connecting to your Instance: Getting-Started/Log-in-to-your-instance.md
+          - Key Pairs: Getting-Started/Key-pairs.md
+          - Security Groups: Getting-Started/Configuring-security-groups.md
+      - Next Steps:
+          - Creating DNS Records: Getting-Started/Creating-subdomain.md
+          - Using OpenStack CLI: Getting-Started/Using-Openstack-CLI.md
   - OpenStack:
       - Overview: openstack/index.md
       - Compute:
@@ -52,17 +61,19 @@ nav:
           - Advanced Networking: gardener/advanced-networking.md
           - Gardener DNS: gardener/gardener-dns.md
           - WebAssembly: gardener/serverless-webassembly.md
+      - Unmanaged Kubernetes:
+          - Talos:
+              - Creating a Talos Cluster: talos/creating-talos-cluster.md
+      - Applications & Services:
           - Installing Helm: kubernetes/installing-helm.md
           - NGINX Ingress with Let's Encrypt: kubernetes/ingress-with-nginx-letsencrypt.md
           - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
           - PostgreSQL Backups: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
           - Creating a FerretDB Database: kubernetes/creating-a-ferretdb-database.md
-      - Unmanaged Kubernetes:
-          - Talos:
-              - Creating a Talos Cluster: talos/creating-talos-cluster.md
   - Billing and Cost:
+      - Managing Your Payment Method: billing-and-cost/payment-methods.md
       - Managing Cloud Costs: billing-and-cost/managing-cost.md
-  - Orchestration:
+  - Infrastructure as Code:
       - Overview: orchestration/index.md
       - Terraform:
           - Creating Instances: terraform/creating-instances.md

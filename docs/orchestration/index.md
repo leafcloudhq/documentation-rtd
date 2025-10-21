@@ -1,12 +1,10 @@
-# Orchestration
-
-## Infrastructure as Code
+# Infrastructure as Code
 
 Infrastructure as Code (IaC) allows you to define and manage your cloud infrastructure using code rather than manual processes. This approach brings version control, repeatability, and automation to your infrastructure management.
 
-## Why use Orchestration?
+## Why use Infrastructure as Code?
 
-Orchestration tools help you automate the provisioning and management of your Leafcloud resources. Instead of manually creating instances, networks, and storage through the web interface, you can define your infrastructure in code and deploy it automatically.
+Infrastructure as Code tools help you automate the provisioning and management of your Leafcloud resources. Instead of manually creating instances, networks, and storage through the web interface, you can define your infrastructure in code and deploy it automatically.
 
 **Benefits:**
 - **Reproducibility**: Create identical environments every time

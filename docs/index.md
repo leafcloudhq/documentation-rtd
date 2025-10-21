@@ -4,6 +4,8 @@ Leafcloud is Europe's first truly sustainable public cloud platform, built on op
 
 This documentation will guide you through everything you need to know to build, deploy, and scale your applications on Leafcloud.
 
+**New to Leafcloud?** Start with [Getting Started](Getting-Started/) to set up your team and launch your first instance.
+
 ---
 
 ## The Leafcloud Platform

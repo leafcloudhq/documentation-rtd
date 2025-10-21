@@ -1,4 +1,4 @@
-# Managing your cloud costs
+# Managing Cloud Costs
 
 This document explains how to track your resource usage and optimize your costs in our cloud service.
 

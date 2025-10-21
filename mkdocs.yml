@@ -14,13 +14,9 @@ nav:
   - Home: index.md
   - Getting Started:
       - Overview: Getting-Started/index.md
-      - Managing Your Team: Getting-Started/managing-your-team.md
-      - Account Security & Authentication: Getting-Started/Changing-your-password.md
-      - Launch Your First Instance:
-          - Launching an Instance: Getting-Started/Launching-an-instance.md
-          - Connecting to your Instance: Getting-Started/Log-in-to-your-instance.md
-          - Key Pairs: Getting-Started/Key-pairs.md
-          - Security Groups: Getting-Started/Configuring-security-groups.md
+      - Launch Your First Instance: Getting-Started/Launching-an-instance.md
+      - Enable 2FA & Security: Getting-Started/Changing-your-password.md
+      - Invite Team Members: Getting-Started/managing-your-team.md
       - Next Steps:
           - Creating DNS Records: Getting-Started/Creating-subdomain.md
           - Using OpenStack CLI: Getting-Started/Using-Openstack-CLI.md

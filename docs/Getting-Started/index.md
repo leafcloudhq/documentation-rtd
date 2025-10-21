@@ -14,21 +14,38 @@ You're ready to start building!
 
 ---
 
-## Quick Links
+## 🚀 Get Started in 3 Steps
 
-- **[Manage Your Team →](managing-your-team.md)** - Invite users and control project access
-- **[Launch Your First Instance →](Launching-an-instance.md)** - Deploy a virtual machine
-- **[Change Your Password →](Changing-your-password.md)** - Update your credentials
+### 1. Launch Your First Instance
+
+Deploy a virtual machine in minutes:
+
+1. **[Set up SSH Key Pairs →](Key-pairs.md)** - Generate or import your SSH key
+2. **[Launch an Instance →](Launching-an-instance.md)** - Deploy your first virtual machine
+3. **[Connect to Your Instance →](Log-in-to-your-instance.md)** - SSH into your new server
+4. **[Configure Security Groups →](Configuring-security-groups.md)** - Set up firewall rules
+
+### 2. Create Teams and Projects
+
+Organize your cloud resources and collaborate:
+
+- **[Invite Team Members →](managing-your-team.md)** - Add colleagues and control project access
+- **[Manage Projects](managing-your-team.md)** - Create and organize your OpenStack projects
+
+### 3. Account Security
+
+Your account security is managed through our authentication portal:
+
+- **[Enable 2FA & Manage Security →](Changing-your-password.md)** - Secure your account and update credentials
+- Visit [identity.leaf.cloud](https://identity.leaf.cloud/realms/leafcloud/account/account-security/signing-in) to manage your authentication settings
 
 ---
 
-## What's Next?
+## Next Steps
 
-Follow the guides in this section to:
+Once you've completed the basics, explore:
 
-1. **Set up your team** - Invite colleagues and organize access
-2. **Launch instances** - Create your first virtual machines
-3. **Configure networking** - Set up security groups and key pairs
-4. **Use advanced features** - DNS, OpenStack CLI, and more
+- **[Creating DNS Records →](Creating-subdomain.md)** - Set up custom domains
+- **[Using OpenStack CLI →](Using-Openstack-CLI.md)** - Automate tasks with command-line tools
 
 

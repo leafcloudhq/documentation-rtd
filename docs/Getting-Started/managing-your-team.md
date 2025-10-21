@@ -74,9 +74,9 @@ Can create and manage resources in assigned projects only
 
 Now that you know how to manage your team:
 
-- **[Create Additional Projects →](creating-additional-projects.md)** - Organize resources across multiple projects
-- **[Launch Your First Instance →](accessing-openstack-dashboard.md)** - Start using OpenStack
-- **[Your Account Dashboard →](your-account-dashboard.md)** - Learn more about managing your account
+- **[Launch Your First Instance →](Launching-an-instance.md)** - Start deploying virtual machines
+- **[Configure Security →](Changing-your-password.md)** - Enable 2FA and manage authentication
+- **[Using OpenStack CLI →](Using-Openstack-CLI.md)** - Automate tasks with command-line tools
 
 ---
 

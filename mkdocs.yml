@@ -123,12 +123,12 @@ theme:
   
   # Features
   features:
-    - navigation.instant        # Instant loading
-    - navigation.instant.progress  # Show progress bar
+    # navigation.instant removed - causes scroll and navigation issues
+    # navigation.instant.progress removed - not needed without instant loading
     - navigation.tracking       # Update URL with active anchor
     - navigation.tabs           # Top-level tabs
     - navigation.tabs.sticky    # Sticky tabs
-    - navigation.sections       # Section index pages
+    # - navigation.sections     # REMOVED: Prevents collapsible sections - sections are now collapsible
     # - navigation.expand         # Expand navigation by default (disabled for collapsible sections)
     - navigation.path           # Show navigation path
     - navigation.indexes        # Attach pages to sections

@@ -246,40 +246,58 @@ body {
   background-color: rgba(0, 224, 143, 0.08);
 }
 
-/* Subsection headers (non-clickable labels like Terraform, Ansible) */
-.md-nav__item--section .md-nav__item--section > label.md-nav__link {
-  font-weight: 600;
-  font-size: 0.75rem;
+/* Subsection headers - collapsible groups (Compute, Volumes, Network, etc.) */
+.md-nav__item--section .md-nav__item--nested > label.md-nav__link {
+  font-weight: 700 !important;  /* Bold */
+  font-size: 0.75rem !important;  /* Smaller but still bold */
   color: var(--leafcloud-black);
-  padding: 0.5rem 0.75rem;
-  padding-right: 2rem;
-  margin: 0.15rem 0;
+  padding: 0.6rem 0.75rem;
+  padding-right: 2.5rem;
+  margin: 0.25rem 0;
   text-transform: none;
   position: relative;
   cursor: pointer;
   display: block;
   transition: all 0.2s ease;
+  letter-spacing: 0.3px;
 }
 
-.md-nav__item--section .md-nav__item--section > label.md-nav__link:hover {
+/* Hover state for group headers */
+.md-nav__item--section .md-nav__item--nested > label.md-nav__link:hover {
   color: var(--leafcloud-green);
+  background-color: rgba(0, 224, 143, 0.05);  /* Very subtle background */
+}
+
+/* Active/expanded group header - more subtle styling */
+.md-nav__item--section .md-nav__item--nested.md-nav__item--active > label.md-nav__link {
+  color: var(--leafcloud-green);
+  background-color: rgba(0, 224, 143, 0.06);  /* Subtle background instead of bright */
+  border-left: 3px solid var(--leafcloud-green);  /* Add left border for clarity */
+  padding-left: calc(0.75rem - 3px);  /* Adjust padding to compensate for border */
 }
 
 /* Arrow for collapsible subsections */
-.md-nav__item--section .md-nav__item--section > label.md-nav__link::after {
+.md-nav__item--section .md-nav__item--nested > label.md-nav__link::after {
   content: "";
   position: absolute;
-  right: 0.5rem;
+  right: 0.75rem;  /* Adjusted from 0.5rem */
   top: 50%;
-  width: 0.4rem;
-  height: 0.4rem;
+  width: 0.45rem;  /* Slightly larger arrow */
+  height: 0.45rem;
   border-right: 2px solid var(--leafcloud-gray);
   border-bottom: 2px solid var(--leafcloud-gray);
   transform: translateY(-50%) rotate(45deg);
   transition: transform 0.25s ease;
 }
 
-.md-nav__item--section .md-nav__item--section > input:checked ~ label.md-nav__link::after {
+/* Arrow changes color on hover and when active */
+.md-nav__item--section .md-nav__item--nested > label.md-nav__link:hover::after,
+.md-nav__item--section .md-nav__item--nested.md-nav__item--active > label.md-nav__link::after {
+  border-right-color: var(--leafcloud-green);
+  border-bottom-color: var(--leafcloud-green);
+}
+
+.md-nav__item--section .md-nav__item--nested > input:checked ~ label.md-nav__link::after {
   transform: translateY(-50%) rotate(-135deg);
 }
 
@@ -1053,8 +1071,22 @@ html {
   color: #ffffff;
 }
 
-[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--section > label.md-nav__link {
-  color: #e8e8e8;
+[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--nested > label.md-nav__link {
+  color: #ffffff;
+  font-weight: 700 !important;
+}
+
+/* Dark Mode - Active/expanded group header */
+[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--nested.md-nav__item--active > label.md-nav__link {
+  color: var(--leafcloud-green);
+  background-color: rgba(0, 224, 143, 0.1);
+  border-left-color: var(--leafcloud-green);
+}
+
+/* Dark Mode - Hover state for group headers */
+[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--nested > label.md-nav__link:hover {
+  color: var(--leafcloud-green);
+  background-color: rgba(0, 224, 143, 0.08);
 }
 
 [data-md-color-scheme="slate"] .md-nav__item--section .md-nav .md-nav__link {
@@ -1062,9 +1094,16 @@ html {
 }
 
 /* Dark Mode - Navigation Arrow */
-[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--section > label.md-nav__link::after {
+[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--nested > label.md-nav__link::after {
   border-right-color: #b8b8b8;
   border-bottom-color: #b8b8b8;
+}
+
+/* Dark Mode - Arrow on hover and active */
+[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--nested > label.md-nav__link:hover::after,
+[data-md-color-scheme="slate"] .md-nav__item--section .md-nav__item--nested.md-nav__item--active > label.md-nav__link::after {
+  border-right-color: var(--leafcloud-green);
+  border-bottom-color: var(--leafcloud-green);
 }
 
 /* Dark Mode - Sidebar */

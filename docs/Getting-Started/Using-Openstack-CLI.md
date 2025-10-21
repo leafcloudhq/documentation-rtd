@@ -1,4 +1,4 @@
-# How to use the Openstack CLI
+# Using OpenStack CLI
 
 This tutorial explains how work on a project using the Openstack CLI tools 
 

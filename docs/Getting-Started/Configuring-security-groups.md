@@ -1,4 +1,4 @@
-# Configuring secure access
+# Security Groups
 
 This tutorial will walk you through Security Groups and IP rules
 

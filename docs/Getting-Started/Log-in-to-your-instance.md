@@ -1,4 +1,4 @@
-# Log in to your instance
+# Connecting to your Instance
 
 This tutorial will show you how to log in to your instance
 

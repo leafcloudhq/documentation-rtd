@@ -1,4 +1,4 @@
-# How to attach a volume to an instance
+# Attaching a Volume
 
 Before attaching a volume to an instance, you need to create both a volume and an instance, instructions for which you can find in the related tutorials
 

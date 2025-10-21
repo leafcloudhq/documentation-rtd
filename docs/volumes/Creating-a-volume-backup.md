@@ -1,4 +1,4 @@
-# Creating a volume backup
+# Creating a Volume Backup
 
 This tutorial will explain how to create a backup of your volume, both by using the Openstack CLI or the Horizon dashboard. Creating a backup of your volume is important. Knowing that your data is backed up provides peace of mind, allowing you to focus on other things without worrying about data loss due to software malfunction, or other unforeseen circumstances. Besides, your businesses may require you to back up their data to comply with legal and regulatory requirements.
 

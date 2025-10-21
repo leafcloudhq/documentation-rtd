@@ -1,8 +1,12 @@
-# How to launch an instance
+# Launching an Instance
 
-In this tutorial we'll work through setting up a Leafcloud instance. 
+In this tutorial we'll work through setting up a Leafcloud instance.
 
-Navigate to *Compute*, then click on *Instances*
+## Login to OpenStack
+
+First, log in to the OpenStack dashboard at [create.leaf.cloud](https://create.leaf.cloud)
+
+Once logged in, navigate to *Compute*, then click on *Instances*
 
 ![how-to-start-an-instance-1](../images/how-to-start-an-instance-1.png)
 

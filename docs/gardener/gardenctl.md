@@ -80,7 +80,7 @@ Create the file `~/.garden/gardenctl-v2.yaml`. This file will store the configur
 ```yaml
 gardens:
   - identity: leafcloud-production
-    kubeconfig: "path to downloaded file from step 6
+    kubeconfig: "path to downloaded file from step 6"
 ```
 
 Add the following to your .bashrc or .zshrc file

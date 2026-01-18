@@ -136,7 +136,7 @@ kubectl get shoots <cluster-name> -o yaml
 To **target a specific cluster (shoot)**, run:
 
 ```bash
-gardenctl target --garden prod-leaftest --project rbqlcbxiav  --shoot clustername 
+gardenctl target --garden leafcloud-production --project <your-project-id>  --shoot <clustername >
 ```
 
 Now, you can use `kubectl` commands to manage the selected cluster:

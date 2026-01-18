@@ -73,6 +73,9 @@ sudo mv kubelogin /usr/local/bin/kubectl-oidc_login
 !!! warning
     The downloaded Kubeconfig file provides access to your Gardener clusters and should be treated with the same level of care as your other cloud credentials. Avoid sharing this file with anyone and store it securely.
 
+!!! info
+    When using kubctl 1.26 or higher, your config needs to be updated slightly due to changes in how kubectl handles authentication plugins. In the downloaded kubeconfig you need to change users[0].user.exec.command from ```kubectl``` to ```kubelogin``` and remove ```oidc-login``` and ```'--oidc-pkce-method=S256'``` from users[0].user.exec.args
+
 ## 3: Setting up `gardenctl`
 
 Create the file `~/.garden/gardenctl-v2.yaml`. This file will store the configuration for your Gardener clusters.

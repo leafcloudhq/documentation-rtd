@@ -90,6 +90,8 @@ nav:
       - data-science/index.md
       - Private LLM:
           - Setup Private LLM on Kubernetes: private-llm/setup-private-llm.md
+          - Team OpenCode with vLLM: private-llm/team-opencode-vllm.md
+          - Configuring OpenCode Client: private-llm/opencode-client-setup.md
       - GPU Computing:
           - Installing GPU Drivers: data-science/installing-gpu-drivers.md
           - Using a GPU: data-science/using-a-gpu.md

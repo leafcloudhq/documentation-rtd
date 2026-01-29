@@ -202,7 +202,7 @@ kubectl get certificate -n ai
 
 ## Step 5: Access Open WebUI
 
-Open your browser and navigate to your domain (e.g., `https://openwebui.your-project.xxxx.gardener.leaf.cloud`).
+Open your browser and navigate to your domain (e.g., `https://openwebui.<cluster-name>.<project-id>.gardener.leaf.cloud`).
 
 1. **Create an account**: The first user to sign up becomes the admin
 2. **Download a model**: Click on your profile > Settings > Models > Pull a model

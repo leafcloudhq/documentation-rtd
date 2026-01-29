@@ -62,6 +62,7 @@ nav:
               - Creating a Talos Cluster: talos/creating-talos-cluster.md
       - Applications & Services:
           - Installing Helm: kubernetes/installing-helm.md
+          - NVIDIA GPU Operator: kubernetes/installing-nvidia-gpu-operator.md
           - NGINX Ingress with Let's Encrypt: kubernetes/ingress-with-nginx-letsencrypt.md
           - Creating a PostgreSQL Cluster: kubernetes/creating-a-postgresql-cluster.md
           - PostgreSQL Backups: kubernetes/scheduling-backups-of-a-PostgreSQL-database.md
@@ -90,6 +91,7 @@ nav:
       - data-science/index.md
       - Private LLM:
           - Why Run Your Own LLM Server?: private-llm/why-private-llm.md
+          - Open WebUI with Ollama: private-llm/private-llm-with-openwebui-and-ollama.md
           - Setup Private LLM on Kubernetes: private-llm/setup-private-llm.md
           - Team OpenCode with vLLM: private-llm/team-opencode-vllm.md
           - Configuring OpenCode Client: private-llm/opencode-client-setup.md

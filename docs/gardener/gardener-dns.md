@@ -17,10 +17,10 @@ To locate the domain assigned to your cluster, navigate to the **Cluster Details
 3. Navigate to **Infrastructure**.
 4. Look for **Shoot Domain** – this is your cluster's base domain, which you can use to create subdomains.
 
-For example, if your **Shoot Domain** is `my-cluster.project-id.gardener.leaf.cloud`, you can create subdomains under it using an Ingress resource.
+For example, if your **Shoot Domain** is `my-cluster.<project-id>.gardener.leaf.cloud`, you can create subdomains under it using an Ingress resource.
 
 ## Creating a New Subdomain
-You can create a new subdomain under your Gardener Shoot Domain by defining an Ingress resource. The following example creates an Ingress for `custom-url.my-cluster.project-id.gardener.leaf.cloud`:
+You can create a new subdomain under your Gardener Shoot Domain by defining an Ingress resource. The following example creates an Ingress for `custom-url.my-cluster.<project-id>.gardener.leaf.cloud`:
 
 ### Example Ingress YAML
 ```yaml
@@ -32,13 +32,13 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/rewrite-target: /
-    dns.gardener.cloud/dnsnames: custom-url.my-cluster.project-id.gardener.leaf.cloud
+    dns.gardener.cloud/dnsnames: custom-url.my-cluster.<project-id>.gardener.leaf.cloud
     dns.gardener.cloud/ttl: "600"
     dns.gardener.cloud/class: garden
 spec:
   ingressClassName: nginx
   rules:
-  - host: custom-url.my-cluster.project-id.gardener.leaf.cloud
+  - host: custom-url.my-cluster.<project-id>.gardener.leaf.cloud
     http:
       paths:
       - path: /
@@ -50,7 +50,7 @@ spec:
               number: 80
   tls:
   - hosts:
-    - custom-url.my-cluster.project-id.gardener.leaf.cloud
+    - custom-url.my-cluster.<project-id>.gardener.leaf.cloud
     secretName: test-ingress-tls
 
 ```
@@ -75,8 +75,13 @@ kubectl apply -f ingress.yaml
 
 ## Verifying the DNS Record
 Once the Ingress is applied, verify that the DNS record is created by checking:
-dig test-nginx.anythingllm.rbqlcbxiav.gardener.leaf.cloud
+dig test-nginx.anythingllm.<project-id>.gardener.leaf.cloud
 You should see an A record resolving to the LoadBalancer IP of your nginx ingress controller.
+
+!!! warning
+  it can take several minutes before changes are propagated accross nameservers. To verify instant, try our nameserver ns1.leaf.cloud
+
+
 
 ## Conclusion
 

@@ -2,12 +2,6 @@
 
 This guide shows how to configure [OpenCode](https://opencode.ai) to use your team's private LLM server.
 
-**Why use a private server?**
-
-- Your code stays private - never sent to external AI providers
-- Unlimited usage - no per-token costs or rate limits
-- Fast responses - dedicated GPU for your team
-
 ## Prerequisites
 
 You'll need from your administrator:

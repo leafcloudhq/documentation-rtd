@@ -2,33 +2,6 @@
 
 Deploy a shared AI coding assistant for your entire development team using [OpenCode](https://opencode.ai) and a GPU server on Leafcloud. This tutorial shows you how to set up a vLLM server running Qwen3-Coder that multiple team members can use simultaneously.
 
-## Why Run Your Own LLM Server?
-
-### Complete Privacy
-
-Your code never leaves your infrastructure. Unlike cloud AI services:
-
-- **No data sharing** - Your proprietary code isn't used to train external models
-- **No third-party access** - Only your team can access the server
-- **Compliance friendly** - Meet data residency and security requirements
-- **IP protection** - Keep your competitive advantage secure
-
-### Full Cost Control
-
-You decide what you spend:
-
-- **Predictable pricing** - Fixed hourly rate (€1.61/hr for A100), no per-token surprises
-- **No usage limits** - Unlimited tokens, unlimited requests
-- **Scale on demand** - Spin up when needed, shut down when not
-- **Team sharing** - One server, unlimited developers
-
-### Additional Benefits
-
-- **Performance** - Dedicated GPU means consistent, fast responses
-- **Model choice** - Run any open-source model (Qwen3-Coder, Llama, DeepSeek, etc.)
-- **Customization** - Fine-tune context length, add multiple models
-- **Sustainability** - Leafcloud's GPUs heat buildings instead of wasting energy
-
 ## Architecture Overview
 
 ```

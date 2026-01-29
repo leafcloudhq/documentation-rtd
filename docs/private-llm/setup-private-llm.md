@@ -6,23 +6,6 @@ At Leafcloud, the leading sustainable cloud provider, we recognize the environme
 
 In the first part of this series, I will guide you through setting up a large language model in Kubernetes and installing all necessary tools, while in the second part, I will demonstrate how to leverage the capabilities of your LLMs by creating custom chatbots, embedding your documents, and connecting your LLM to VS Code.
 
-## Why Consider a Private LLM?
-
-Private LLMs offer several advantages:
-
-- **Data Control and Privacy**: Keep your sensitive data in-house, ensuring regulatory compliance and mitigating risks of data breaches.
-- **Cost Efficiency**: Predictable costs, potential economies of scale, and long-term savings compared to ongoing external service payments.
-- **Customization**: Fine-tune the model with your proprietary data for enhanced accuracy and relevance to your specific needs. Seamless integration with existing systems using Retrieval-Augmented Generation (RAG) is also possible.
-
-
-### Is Setting Up a Private LLM Right for You?
-
-Setting up a private LLM has become more approachable thanks to a growing range of open-source tools and pre-trained models. While some technical expertise is still required, the process is no longer limited to just large organizations with extensive resources.
-
-If you're intrigued by the potential of private LLMs and have a basic understanding of relevant technologies, don't be discouraged! This guide provides a roadmap to get you started.
-
-The full code of this tutorial can be found here [https://github.com/leafcloudhq/private-llm-demo]
-
 ## The Setup 
 
 Here's a breakdown of the tools and technologies involved

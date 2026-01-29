@@ -89,6 +89,7 @@ nav:
   - AI/ML & Data Science:
       - data-science/index.md
       - Private LLM:
+          - private-llm/index.md
           - Setup Private LLM on Kubernetes: private-llm/setup-private-llm.md
           - Team OpenCode with vLLM: private-llm/team-opencode-vllm.md
           - Configuring OpenCode Client: private-llm/opencode-client-setup.md

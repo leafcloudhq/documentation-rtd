@@ -344,17 +344,6 @@ Share the following with your team:
 
 Each developer follows the client setup guide to configure their local OpenCode installation.
 
----
-
-## Available GPU Flavors
-
-| Flavor | GPUs | VRAM | vCPUs | RAM | Hourly Cost |
-|--------|------|------|-------|-----|-------------|
-| `eg1.a100x1.V12-84` | 1x A100 | 80GB | 12 | 84GB | €1.61 |
-| `eg1.a100x2.V25-164` | 2x A100 | 160GB | 25 | 164GB | €3.20 |
-| `eg1.a30x1.V8-32` | 1x A30 | 24GB | 8 | 32GB | ~€0.80 |
-
-For Qwen3-Coder-30B, a single A100 is sufficient and recommended.
 
 ## Recommended Models
 

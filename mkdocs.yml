@@ -54,6 +54,7 @@ nav:
           - Creating a Cluster: gardener/creating-a-kubernetes-cluster.md
           - Installing gardenctl: gardener/gardenctl.md
           - Temporary Kubeconfig: gardener/temporary-kubeconfig.md
+          - Secure CI/CD Deployment: gardener/secure-cicd-deployment.md
           - Advanced Networking: gardener/advanced-networking.md
           - Gardener DNS: gardener/gardener-dns.md
           - WebAssembly: gardener/serverless-webassembly.md

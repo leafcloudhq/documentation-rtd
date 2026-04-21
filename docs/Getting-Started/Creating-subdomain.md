@@ -58,7 +58,7 @@ Follow these steps to add a CAA record:
 2. To add a CAA record allowing Let's Encrypt to issue certificates:
    - **Record Type**: CAA
    - **Name**: `hello-world.domains.leaf.cloud.` (Ensure to include the final period to signify a fully qualified domain name.)
-   - **Value**: `0 issue "letsencrypt.org"`
+   - **Value**: `0 issue letsencrypt.org`
    - **TTL (Time to Live)**: Enter a TTL value, typically 3600 (one hour) or 86400 (one day), depending on how often you expect to update your CAA records.
 3. Click **Submit** to save the CAA record.
 

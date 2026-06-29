@@ -89,3 +89,57 @@ $ mc ls leafcloud
 ```sh
 mc copy <local_file> leafcloud/<bucket_name>/<path>/
 ```
+
+### Server-Side Encryption with Customer-Provided Keys (SSE-C)
+Leafcloud Object Storage supports S3 server-side encryption with customer-provided keys (SSE-C). With SSE-C, you provide the encryption key with each request. Leafcloud uses the key to encrypt or decrypt the object, but does not store the key.
+
+Generate a 256-bit key and its MD5 checksum:
+
+```sh
+KEY=$(openssl rand -base64 32)
+
+KEY_MD5=$(
+  printf '%s' "$KEY" |
+  base64 -d |
+  openssl dgst -md5 -binary |
+  base64
+)
+```
+
+Upload an object with SSE-C:
+
+```sh
+aws s3api put-object \
+  --bucket <bucket_name> \
+  --key <object_name> \
+  --body <local_file> \
+  --sse-customer-algorithm AES256 \
+  --sse-customer-key "$KEY" \
+  --sse-customer-key-md5 "$KEY_MD5" \
+  --endpoint-url https://leafcloud.store
+```
+
+Retrieve an SSE-C encrypted object with the same customer-provided key:
+
+```sh
+aws s3api get-object \
+  --bucket <bucket_name> \
+  --key <object_name> \
+  <output_file> \
+  --sse-customer-algorithm AES256 \
+  --sse-customer-key "$KEY" \
+  --sse-customer-key-md5 "$KEY_MD5" \
+  --endpoint-url https://leafcloud.store
+```
+
+The response includes the SSE-C algorithm and the MD5 checksum of the customer-provided key:
+
+```json
+{
+  "ETag": "\"14758f1afd44c09b7992073ccf00b43d\"",
+  "SSECustomerAlgorithm": "AES256",
+  "SSECustomerKeyMD5": "lNMVzsZHHOURWAMC8eQdwg=="
+}
+```
+
+Keep the encryption key safe. You need the same key to read or copy the encrypted object later.

@@ -58,6 +58,7 @@ nav:
           - Advanced Networking: gardener/advanced-networking.md
           - Gardener DNS: gardener/gardener-dns.md
           - WebAssembly: gardener/serverless-webassembly.md
+          - Enabling gVisor: gardener/enabling-gvisor.md
       - Unmanaged Kubernetes:
           - Talos:
               - Creating a Talos Cluster: talos/creating-talos-cluster.md
